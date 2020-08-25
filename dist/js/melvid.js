@@ -1,7 +1,7 @@
 var API_KEY        = 'AIzaSyDk92w08OLlus1NZoHUSi3-EiQQPc2wna4';
 var CLIENT_ID 	   = '344303588088-0h7d642e8vbh0btai69ts8gmkre8fpvu.apps.googleusercontent.com';
 var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
-var SCOPES         = 'drive';
+var SCOPES         = 'https://www.googleapis.com/auth/drive';
 
 var authorizeButton = document.getElementById('authorize-button');
 var signoutButton   = document.getElementById('signout-button');
