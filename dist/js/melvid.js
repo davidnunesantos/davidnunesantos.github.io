@@ -54,9 +54,7 @@ function makeApiCall() {
 
     var request = gapi.client.sheets.spreadsheets.get(params);
     request.then(function (response) {
-        response.result.sheets[0].data[0].rowData.each(function() {
-            console.log(this)
-        });
+        console.log(response.result.sheets[0].data[0].rowData);
     }, function (reason) {
         console.error('error: ' + reason.result.error.message);
     });
