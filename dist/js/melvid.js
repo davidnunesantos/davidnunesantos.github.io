@@ -54,21 +54,10 @@ function makeApiCall() {
 
     var request = gapi.client.sheets.spreadsheets.get(params);
     request.then(function (response) {
-        console.log(response.result);
+        response.result.sheets[0].data[0].rowData.each(function() {
+            console.log(this)
+        });
     }, function (reason) {
         console.error('error: ' + reason.result.error.message);
-    });
-}
-
-// Load the API and make an API call.  Display the results on the screen.
-function makeApiCallOld() {
-    gapi.client.people.people.get({
-        'resourceName': 'people/me',
-        'requestMask.includeField': 'person.names'
-    }).then(function (resp) {
-        var p = document.createElement('p');
-        var name = resp.result.names[0].givenName;
-        p.appendChild(document.createTextNode('Hello, ' + name + '!'));
-        document.getElementById('content').appendChild(p);
     });
 }
