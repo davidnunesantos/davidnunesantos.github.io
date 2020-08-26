@@ -2,23 +2,24 @@
 <html>
 
 <head>
-  <title>Melvid 2.0</title>
-  <meta charset='utf-8' />
+    <title>Melvid 3.0</title>
+    <meta charset='utf-8' />
+    <link rel="shortcut icon" href="./dist/assets/favicon.ico" type="image/x-icon">
 
-  <script src="./dist/js/jjquery-3.5.1.min.js"></script>
+    <script src="./dist/js/jjquery-3.5.1.min.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
 </head>
 
 <body>
-    <p>Melvid 2.0</p>
+    <p>Melvid 3.0</p>
 
-	<!--Add buttons to initiate auth sequence and sign out-->
-	<button id="authorize-button" style="display: none;">Authorize</button>
-	<button id="signout-button" style="display: none;">Sign Out</button>
+  	<!--Add buttons to initiate auth sequence and sign out-->
+  	<button id="authorize-button" style="display: none;">Entrar</button>
+  	<button id="signout-button" style="display: none;">Sair</button>
 
     <div id="content"></div>
     
     <script src="./dist/js/melvid.js?v=1"></script>
-    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
 </body>
 
 </html>
