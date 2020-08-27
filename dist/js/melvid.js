@@ -1,9 +1,16 @@
+// Informações da API
 var API_KEY        = 'AIzaSyDk92w08OLlus1NZoHUSi3-EiQQPc2wna4';
 var CLIENT_ID 	   = '344303588088-q1nqpad3r4rp8lpnmg390tqn0k6c9rkt.apps.googleusercontent.com'; //'344303588088-0h7d642e8vbh0btai69ts8gmkre8fpvu.apps.googleusercontent.com';
 var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
 var SCOPES         = 'https://www.googleapis.com/auth/drive';
 
-var SPREADSHEET_ID = '1XrE0vgUgyZnZUZJwWMuQ5BH7T35IRubqd_4HocX0wJ0';
+// Informações da planilha
+var SPREADSHEET_ID        = '1XrE0vgUgyZnZUZJwWMuQ5BH7T35IRubqd_4HocX0wJ0';
+var RANGE_MES             = "'Dashboard - Orçamento'!I3";
+var RANGE_GUARDADO        = "'Dashboard - Orçamento'!C6:C9";
+var RANGE_RECEITAS        = "'Dashboard - Orçamento'!C12:C15";
+var RANGE_OUTRAS_RECEITAS = "'Dashboard - Orçamento'!C18:C21";
+var RANGE_RESULTADOS      = "'Dashboard - Orçamento'!J8:J10";
 
 var authorizeButton = document.getElementById('authorize-button');
 var signoutButton   = document.getElementById('signout-button');
@@ -32,7 +39,11 @@ function updateSigninStatus(isSignedIn) {
     if (isSignedIn) {
         authorizeButton.style.display = 'none';
         signoutButton.style.display   = 'block';
-        //makeApiCall();
+        carregarDados();
+
+        $('#mes').on('change', function() {
+            carregarDados();
+        });
     } else {
         authorizeButton.style.display = 'block';
         signoutButton.style.display   = 'none';
@@ -47,23 +58,6 @@ function handleSignoutClick(event) {
     gapi.auth2.getAuthInstance().signOut();
 }
 
-/*function makeApiCall() {
-    var params = {
-        spreadsheetId: SPREADSHEET_ID,
-        ranges: ["'Dashboard - Orçamento'!E6:F13"],
-        includeGridData: true
-    };
-
-    var request = gapi.client.sheets.spreadsheets.get(params);
-    request.then(function (response) {
-        $.each(response.result.sheets[0].data[0].rowData, function(i, e) {
-            $('#content').append($('<div />').text(e.values[0].formattedValue));
-        });
-    }, function (reason) {
-        console.error('error: ' + reason.result.error.message);
-    });
-}*/
-
 // Formato do intervalo deve ser uma notação A1, exemplo: "'Dashboard - Orçamento'!A1:A17"
 function getDadosFromRange(intervalo) {
     var params = {
@@ -73,19 +67,12 @@ function getDadosFromRange(intervalo) {
         dateTimeRenderOption: 'SERIAL_NUMBER'
     };
 
-    var request = gapi.client.sheets.spreadsheets.values.get(params);
-    request.then(function(response) {
-        $.each(response.result.values, function(i, e) {
-            console.log(e);
-        });
-    }, function(reason) {
-        console.error('error: ' + reason.result.error.message);
-    });
+    return gapi.client.sheets.spreadsheets.values.get(params);
 }
 
 // Formato do intervalo deve ser uma notação A1, exemplo: "'Jan 20'!F17:I17"
 // Formato de values deve ser um array de linhas, exemplo: [['T', 'E', 'S', 'T']]
-function insertDados(intervalo, values) {
+function updateDados(intervalo, values) {
     var params = {
         spreadsheetId: SPREADSHEET_ID,
         range: intervalo,
@@ -98,10 +85,97 @@ function insertDados(intervalo, values) {
         values: values
     };
 
-    var request = gapi.client.sheets.spreadsheets.values.update(params, valueRangeBody);
+    return gapi.client.sheets.spreadsheets.values.update(params, valueRangeBody);
+    
+}
+
+function alterMonth(callback) {
+    var values  = [[$('#mes').val()]];
+    var request = updateDados(RANGE_MES, values);
+
     request.then(function(response) {
-        console.log(response.result);
+        callback();
     }, function(reason) {
         console.error('error: ' + reason.result.error.message);
     });
+}
+
+function getMonth(callback) {
+    var request = getDadosFromRange(RANGE_MES);
+
+    request.then(function(response) {
+        $('#mes').val(response.result.values[0][0]);
+        callback();
+    }, function(reason) {
+        console.error('error: ' + reason.result.error.message);
+    });
+}
+
+function montaGuardado() {
+    var request = getDadosFromRange(RANGE_GUARDADO);
+
+    request.then(function(response) {
+        $('#guardadoNuDavid').text(response.result.values[0][0]);
+        $('#guardadoCarteira').text(response.result.values[1][0]);
+        $('#guardadoBradesco').text(response.result.values[2][0]);
+        $('#guardadoTotal').text(response.result.values[3][0]);
+    }, function(reason) {
+        console.error('error: ' + reason.result.error.message);
+    });
+}
+
+function montaReceitas() {
+    var request = getDadosFromRange(RANGE_RECEITAS);
+
+    request.then(function(response) {
+        $('#receitaDavid').text(response.result.values[0][0]);
+        $('#receitaMel').text(response.result.values[1][0]);
+        $('#receitaOutros').text(response.result.values[2][0]);
+        $('#receitaTotal').text(response.result.values[3][0]);
+    }, function(reason) {
+        console.error('error: ' + reason.result.error.message);
+    });
+}
+
+function montaOutrasReceitas() {
+    var request = getDadosFromRange(RANGE_OUTRAS_RECEITAS);
+
+    request.then(function(response) {
+        $('#outrasFgts').text(response.result.values[0][0]);
+        $('#outrasTransmai').text(response.result.values[1][0]);
+        $('#outrasTotal').text(response.result.values[2][0]);
+    }, function(reason) {
+        console.error('error: ' + reason.result.error.message);
+    });
+}
+
+function montaResultados() {
+    var request = getDadosFromRange(RANGE_RESULTADOS);
+
+    request.then(function(response) {
+        $('#resultadoMes').text(response.result.values[0][0]);
+        $('#receitasGastos').text(response.result.values[1][0]);
+        $('#guardar').text(response.result.values[2][0]);
+    }, function(reason) {
+        console.error('error: ' + reason.result.error.message);
+    });
+}
+
+function getDados() {
+    montaGuardado();
+    montaReceitas();
+    montaOutrasReceitas();
+    montaResultados();
+}
+
+function carregarDados() {
+    if ($('#mes').val() !== '') {
+        alterMonth(function() {
+            getDados();
+        });
+    } else {
+        getMonth(function() {
+            getDados();
+        });
+    }
 }

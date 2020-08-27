@@ -8,8 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Dancing+Script&display=swap" rel="stylesheet">
     <script src="./dist/js/jjquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="./estilo.css">
-    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
-        onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+    
 </head>
 
 <body>
@@ -48,19 +47,19 @@
             <tbody>
                 <tr>
                     <td>Nu David</td>
-                    <td>...</td>
+                    <td id="guardadoNuDavid">...</td>
                 </tr>
                 <tr>
                     <td>Carteira</td>
-                    <td>...</td>
+                    <td id="guardadoCarteira">...</td>
                 </tr>
                 <tr>
                     <td>Bradesco</td>
-                    <td>...</td>
+                    <td id="guardadoBradesco">...</td>
                 </tr>
                 <tr>
                     <td class="vtotal">Total</td>
-                    <td class="vtotal">...</td>
+                    <td class="vtotal"  id="guardadoTotal">...</td>
                 </tr>
             </tbody>
         </table>
@@ -73,19 +72,19 @@
             <tbody>
                 <tr>
                     <td>David</td>
-                    <td>...</td>
+                    <td id="receitaDavid">...</td>
                 </tr>
                 <tr>
                     <td>Mel</td>
-                    <td>...</td>
+                    <td id="receitaMel">...</td>
                 </tr>
                 <tr>
                     <td>Outros tem que pagar</td>
-                    <td>...</td>
+                    <td id="receitaOutros">...</td>
                 </tr>
                 <tr>
                     <td class="vtotal">Receita mensal total</td>
-                    <td class="vtotal">...</td>
+                    <td class="vtotal"  id="receitaTotal">...</td>
                 </tr>
             </tbody>
         </table>
@@ -98,15 +97,15 @@
             <tbody>
                 <tr>
                     <td>FGTS David</td>
-                    <td>...</td>
+                    <td id="outrasFgts">...</td>
                 </tr>
                 <tr>
                     <td>Sistema Transmai</td>
-                    <td>...</td>
+                    <td id="outrasTransmai">...</td>
                 </tr>
                 <tr>
                     <td class="vtotal">Receita mensal total</td>
-                    <td class="vtotal">...</td>
+                    <td class="vtotal" id="outrasTotal">...</td>
                 </tr>
             </tbody>
         </table>
@@ -119,20 +118,21 @@
             <tbody>
                 <tr>
                     <td class="resultados">Receitas p/ mês</td>
-                    <td class="resultados">...</td>
+                    <td class="resultados" id="resultadoMes">...</td>
                 </tr>
                 <tr>
                     <td class="resultados">Receitas - Gastos</td>
-                    <td class="resultados">...</td>
+                    <td class="resultados" id="receitasGastos">...</td>
                 </tr>
                 <tr>
                     <td class="vtotal2">Guardar</td>
-                    <td class="vtotal2">...</td>
+                    <td class="vtotal2" id="guardar">...</td>
                 </tr>
             </tbody>
         </table>
     </header>
 
+<script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
     <script src="./dist/js/melvid.js?v=1"></script>
 </body>
 
