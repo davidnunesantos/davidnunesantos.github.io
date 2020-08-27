@@ -5,20 +5,134 @@
     <title>Melvid 3.0</title>
     <meta charset='utf-8' />
     <link rel="shortcut icon" href="./dist/assets/favicon.ico" type="image/x-icon">
-
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Dancing+Script&display=swap" rel="stylesheet">
     <script src="./dist/js/jjquery-3.5.1.min.js"></script>
-    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+    <link rel="stylesheet" href="./estilo.css">
+    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
+        onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
 </head>
 
 <body>
-    <p>Melvid 3.0</p>
+    <header>
+        <nav>
+            <div class="menu">
+                Orçamento para o mês
+                <select name="mes" id="mes">
+                    <option value>selecione o mês</option>
+                    <option value="Jan 20">Janeiro</option>
+                    <option value="Fev 20">Fevereiro</option>
+                    <option value="Mar 20">Março</option>
+                    <option value="Abr 20">Abril</option>
+                    <option value="Mai 20">Maio</option>
+                    <option value="Jun 20">Junho</option>
+                    <option value="Jul 20">Julho</option>
+                    <option value="Ago 20">Agosto</option>
+                    <option value="Set 20">Setembro</option>
+                    <option value="Out 20">Outubro</option>
+                    <option value="Nov 20">Novembro</option>
+                    <option value="Dez 20">Dezembro</option>
+                </select>
+                <div class="botaos">
+                    <button id="authorize-button" style="">Entrar</button>
+                    <button id="signout-button" style="">Sair</button>
+                </div>
+            </div>
+        </nav>
+        <p>
+        <table class="guardado" border="0">
+            <thread>
+                <tr>
+                    <th colspan="2">Dinheiro Guardado</th>
+                </tr>
+            </thread>
+            <tbody>
+                <tr>
+                    <td>Nu David</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <td>Carteira</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <td>Bradesco</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <td class="vtotal">Total</td>
+                    <td class="vtotal">...</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="guardado" border="0">
+            <thread>
+                <tr>
+                    <th colspan="2">Projeção de Receita Mensal</th>
+                </tr>
+            </thread>
+            <tbody>
+                <tr>
+                    <td>David</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <td>Mel</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <td>Outros tem que pagar</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <td class="vtotal">Receita mensal total</td>
+                    <td class="vtotal">...</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="guardado" border="0">
+            <thread>
+                <tr>
+                    <th colspan="2">Outras Receitas</th>
+                </tr>
+            </thread>
+            <tbody>
+                <tr>
+                    <td>FGTS David</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <td>Sistema Transmai</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <td class="vtotal">Receita mensal total</td>
+                    <td class="vtotal">...</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="guardado" border="0">
+            <thread>
+                <tr>
+                    <th colspan="2" class="tresultados">Resultados Mês</th>
+                </tr>
+            </thread>
+            <tbody>
+                <tr>
+                    <td class="resultados">Receitas p/ mês</td>
+                    <td class="resultados">...</td>
+                </tr>
+                <tr>
+                    <td class="resultados">Receitas - Gastos</td>
+                    <td class="resultados">...</td>
+                </tr>
+                <tr>
+                    <td class="vtotal2">Guardar</td>
+                    <td class="vtotal2">...</td>
+                </tr>
+            </tbody>
+        </table>
+    </header>
 
-  	<!--Add buttons to initiate auth sequence and sign out-->
-  	<button id="authorize-button" style="display: none;">Entrar</button>
-  	<button id="signout-button" style="display: none;">Sair</button>
-
-    <div id="content"></div>
-    
     <script src="./dist/js/melvid.js?v=1"></script>
 </body>
 
