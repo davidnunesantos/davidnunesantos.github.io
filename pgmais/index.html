@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="./images/logo_pgmais.jpg" type="image/x-icon">
+    <title>PGMais - Teste Dev</title>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="./js/jquery-3.5.1.min.js"></script>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" type="text/css" href="./fontawesome/css/all.css">
+    <script defer type="text/javascript" src="./fontawesome/js/all.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Custom -->
+    <script src="./js/dayjs.min.js?v=1"></script>
+    <script src="./js/pgmais.js?v=1"></script>
+    <script src="./js/data_send.js?v=1"></script>
+</head>
+<body class="bg-light mx-xl-5">
+    <div class="container text-body">
+        <div class="row text-center mt-3">
+            <div class="col-12">
+                <h1 class="display">PG Mais - Teste Dev</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="row d-none" id="alertBlock">
+            <div class="col-12">
+                <div class="alert alert-danger" role="alert"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="arquivo">
+                      <label class="custom-file-label" for="arquivo">Faça o upload de um arquivo para realizar a validação dos dados</label>
+                </div>
+            </div>
+        </div>
+        <div class="row d-none" id="resultados">
+            <div class="col-12 mt-3">
+                <h2>Válidos</h2>
+                <div class="p-3 p-xl-5 border rounded bg-white shadow">
+                    <div class="row">
+                        <div class="loading col-12 d-flex justify-content-center">
+                            <div class="fa-3x">
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                        <div class="col-12" id="validos">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-3">
+                <h2>Bloqueados</h2>
+                <div class="p-3 p-xl-5 border rounded bg-white shadow">
+                    <div class="row">
+                        <div class="loading col-12 d-flex justify-content-center">
+                            <div class="fa-3x">
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                        <div class="col-12" id="bloqueados">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

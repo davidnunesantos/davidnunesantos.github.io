@@ -1,2 +1,2 @@
-# davidnunesantos.github.io
-Personal Site
+# David Nunes dos Santos
+Este repositório trata-se de um currículo virtual, para visualiza-lo basta acessar a URL: <a href="https://davidnunesantos.github.io/" target="_blank">davidnunesantos.github.io</a>
