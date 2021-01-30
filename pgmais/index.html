@@ -7,23 +7,26 @@
     <title>PGMais - Teste Dev</title>
 
     <!-- JQuery -->
-    <script type="text/javascript" src="./js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="./library/jquery/jquery-3.5.1.min.js"></script>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap">
 
     <!-- FontAwesome -->
-    <link rel="stylesheet" type="text/css" href="./fontawesome/css/all.css">
-    <script defer type="text/javascript" src="./fontawesome/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="./library/fontawesome/css/all.min.css">
+    <script defer type="text/javascript" src="./library/fontawesome/js/all.min.js"></script>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
-    <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./library/bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="./library/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- DayJS -->
+    <script type="text/javascript" src="./library/dayjs/dayjs.min.js"></script>
 
     <!-- Custom -->
-    <script src="./js/dayjs.min.js?v=1"></script>
+    <script src="./js/classes/data_send.js"></script>
+    <script src="./js/classes/validator.js"></script>
     <script src="./js/pgmais.js?v=1"></script>
-    <script src="./js/data_send.js?v=1"></script>
 </head>
 <body class="bg-light mx-xl-5">
     <div class="container text-body">
@@ -38,6 +41,7 @@
                 <div class="alert alert-danger" role="alert"></div>
             </div>
         </div>
+        <h1>Exibir um colapse para exemplo de arquivo</h1>
         <div class="row">
             <div class="col-12">
                 <div class="custom-file">
@@ -46,31 +50,60 @@
                 </div>
             </div>
         </div>
-        <div class="row d-none" id="resultados">
+        <div class="row d-none resultados">
             <div class="col-12 mt-3">
-                <h2>Válidos</h2>
-                <div class="p-3 p-xl-5 border rounded bg-white shadow">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="nav nav-tabs" id="tabs-resultados" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link text-body active" id="tab-validos" data-toggle="tab" href="#validos" role="tab" aria-controls="validos" aria-selected="true"><h3>Válidos</h3></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-body" id="tab-bloqueados" data-toggle="tab" href="#bloqueados" role="tab" aria-controls="bloqueados" aria-selected="false"><h3>Bloqueados</h3></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content d-none resultados">
+            <div class="tab-pane fade show active" id="validos" role="tabpanel" aria-labelledby="home-tab">
+                <div class="p-3 p-xl-5 border rounded-bottom bg-white shadow">
                     <div class="row">
                         <div class="loading col-12 d-flex justify-content-center">
                             <div class="fa-3x">
                                 <i class="fas fa-spinner fa-spin"></i>
                             </div>
                         </div>
-                        <div class="col-12" id="validos">
+                        <div class="col-12" id="conteudo">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 mt-3">
-                <h2>Bloqueados</h2>
-                <div class="p-3 p-xl-5 border rounded bg-white shadow">
+            <div class="tab-pane fade" id="bloqueados" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="p-3 p-xl-5 border rounded-bottom bg-white shadow">
                     <div class="row">
                         <div class="loading col-12 d-flex justify-content-center">
                             <div class="fa-3x">
                                 <i class="fas fa-spinner fa-spin"></i>
                             </div>
                         </div>
-                        <div class="col-12" id="bloqueados">
+                        <div class="col-12 table-responsive">
+                            <table class="table table-hover text-nowrap" id="table-blocked">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID da mensagem</th>
+                                        <th scope="col">DDD</th>
+                                        <th scope="col">Celular</th>
+                                        <th scope="col">Operadora</th>
+                                        <th scope="col">Hora de envio</th>
+                                        <th scope="col">Mensagem</th>
+                                        <th scope="col">Motivo do bloqueio</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
