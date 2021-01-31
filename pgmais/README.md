@@ -1,5 +1,5 @@
 # Validador de mensagens
-## Consiste em uma página web onde é possível relizar upload de um arquivo .txt ou .csv para realizar uma validação dos dados seguindo algumas regras.
+### Consiste em uma página web onde é possível relizar upload de um arquivo .txt ou .csv para realizar uma validação dos dados seguindo algumas regras.
 
 <!--ts-->
    * [Estrutura](#estrutura)
@@ -10,7 +10,6 @@
    * [Como realizar testes unitários](#como_testar)
    * [Tecnologias utilizadas](#tecnologias)
 <!--te-->
-<hr>
 
 <h2 id="estrutura">Estrutura</h2>
 
@@ -30,8 +29,7 @@
     ├── package.json            # Arquivo de configuração
     ├── README.md               # Readme
     └── testes.html             # Página de testes unitários
-    
-<hr>
+
 
 <h2 id="regras">Regras</h2>
 <ul>
@@ -42,7 +40,6 @@
     <li>Mensagens com mais de 140 caracteres serão bloqueadas</li>
     <li>Caso haja mais de uma mensagem para o mesmo telefone de destino, apenas a mensagem válida com o menor horário de agendamento será considerada;</li>
 </ul>
-<hr>
 
 <h2 id="validacao_telefones">Validação de telefones</h2>
 <p>A validação dos telefones é realizada de acordo com os critérios abaixo:</p>
@@ -53,22 +50,18 @@
     <li>O número do celular decve começar sempre com o número 9;</li>
     <li>O segundo dígito do número do celular deve ser maior que 6;</li>
 </ul>
-<hr>
 
 <h2 id="blacklist">Consultar BlackList</h2>
 <p>A verificação de números em blacklist deve ser realizada atraves de uma api: https://front-test-pg.herokuapp.com/blacklist/:phone</p>
 <p>A validação deve ser feita pelo status de retorno, caso seja 200 o número esta em blacklist, do contrário o status será 404</p>
-<hr>
 
 <h2 id="como_executar">Como executar o projeto</h2>
 <p>Para ver o projeto em execução basta clicar <a href="https://davidnunesantos.github.io/pgmais/index.html">aqui</a>.</p>
 <p>Ou então você pode fazer o download desse repositório e abrir em um navegador <i>web</i> o arquivo <i>index.html</i> que encontra-se na raiz do projeto.</p>
-<hr>
 
 <h2 id="como_testar">Como realizar testes unitários</h2>
 <p>Você pode acessar os testes unitários clicando <a href="https://davidnunesantos.github.io/pgmais/testes.html">aqui</a>.</p>
 <p>Ou então você pode fazer o download desse repositório e testar em sua máquina local, para isso você precisará ter o NodeJS instalado em sua máquina, caso já tenha, basta abrir em um navegador <i>web</i> o arquivo <i>testes.html</i> que encontra-se na raiz do projeto.</p>
-<hr>
 
 <h2 id="tecnologias">Tecnologias utilizadas</h2>
 <p>As seguintes tecnologias foram utilizadas na construção do projeto:</p>
