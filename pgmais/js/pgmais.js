@@ -10,48 +10,6 @@
  */
 const fileExtension  = /text.*/;
 
-/** 
- * Array contendo todos os DDDs válidos do Brasil
- * @constant {Array<number>} 
- * @default
- */
-const ddds_brasil = [11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 24, 27, 28, 31, 32, 33, 34, 35, 37, 38, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 53, 54, 55, 61, 62, 63, 64, 65, 66, 67, 68, 69, 71, 73, 74, 75, 77, 79, 81, 82, 83, 84, 85, 86, 87, 88, 89, 91, 92, 93, 94, 95, 96, 97, 98, 99];
-
-/** 
- * Array contendo todos os DDDs do estado de São Paulo
- * @constant {Array<number>}
- * @default
- */
-const ddds_sao_paulo = [11, 12, 13, 14, 15, 16, 17, 18, 19];
-
-/**
- * Hora máxima parmitida para envio
- * @constant {string} 
- * @default
- */
-const time_limit = '19:59:59';
-
-/**
- * Número máximo de caracteres permitidos por mensagem
- * @constant {number}
- * @default
- */
-const character_limit = 140;
-
-/**
- * Endpoint da API que verifica números em blacklist
- * @constant {string}
- * @default
- */
-const endpoint_blacklist = 'https://front-test-pg.herokuapp.com/blacklist/';
-
-/**
- * Objeto contendo os IDs dos brokers de envio, tendo a operadora como chave
- * @constant {Object.<string, number>}
- * @default
- */
-const broker = { 'VIVO': 1, 'TIM': 1, 'CLARO': 2, 'OI': 2, 'NEXTEL': 3 };
-
 /**
  * Objeto do Validator
  * @constant {Validator}
@@ -181,6 +139,9 @@ function checkFile(file_field) {
  * Realiza a leitura do arquivo validando cada linha e enviado para o HTML
  */
 function readFile() {
+	/**
+	 * @type {FileReader}
+	 */
 	var fileReader = new FileReader();
 	fileReader.readAsText(file);
 
@@ -198,7 +159,7 @@ function readFile() {
 		
 				if (columns.length === 6) {
 					var data_send = new DataSend(columns[0], columns[1], columns[2], columns[3], columns[4], columns[5]);
-					validateData(data_send);
+					validateData(data_send, valid);
 				} else {
 					erro = true;
 					noticeMessage(true, 'Algumas linhas do arquivo <b>' + file.name + '</b> não correspondem ao formato exigido');

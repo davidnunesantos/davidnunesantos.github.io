@@ -31,7 +31,7 @@ class DataSend {
      * Pega o nome da operadora
      * @returns {string}
      */
-    get nomeOperadora() { return this._operadora.toString(); }
+    get nomeOperadora() { return this._operadora.toString().toUpperCase(); }
 
     /**
      * Pega o horário de envio no formato dayjs
@@ -133,12 +133,12 @@ class DataSend {
      * @param {string} mensagem Texto da mensagem
      */
     constructor(id_mensagem, ddd, celular, operadora, horario_envio, mensagem) {
-        this._id_mensagem      = id_mensagem;
-        this._ddd              = ddd;
-        this._celular          = celular;
-        this._operadora        = operadora;
-        this._horario_envio    = horario_envio;
-        this._mensagem         = mensagem;
+        this._id_mensagem      = id_mensagem ?? '';
+        this._ddd              = ddd ?? '';
+        this._celular          = celular ?? '';
+        this._operadora        = operadora ?? '';
+        this._horario_envio    = horario_envio ?? '';
+        this._mensagem         = mensagem ?? '';
         this._broker_id        = null;
         this._motivo_bloqueio  = '';
         this._valido           = false;
