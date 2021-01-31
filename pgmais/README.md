@@ -13,6 +13,7 @@
 <hr>
 
 <h2 id="estrutura">Estrutura</h2>
+
     .
     ├── images
     ├── js                      # Arquivos js
@@ -29,6 +30,7 @@
     ├── package.json            # Arquivo de configuração
     ├── README.md               # Readme
     └── testes.html             # Página de testes unitários
+    
 <hr>
 
 <h2 id="regras">Regras</h2>
