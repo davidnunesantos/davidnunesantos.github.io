@@ -1,0 +1,67 @@
+body {
+    /* background: linear-gradient(50deg, var(--light-grey) 0%, var(--light-green) 50%, var(--green) 100%) no-repeat center center fixed; */
+    background: url(../../images/background_image.png) no-repeat center center fixed;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+.nav-item, .nav-link {
+    transition: all 0.5s;
+}
+
+.nav-item .active, .nav-item:hover {
+    background-color: var(--dark-grey);
+    border-radius: 5px;
+}
+
+.nav-item .active, .nav-item .nav-link:hover {
+    color: white !important;
+}
+
+.bg-light-green {
+    background-color: var(--light-green);
+}
+
+.bg-grey {
+    background-color: var(--grey);
+}
+
+.img-infos {
+    width: 75px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.timeline{
+    position:relative;
+    overflow-y: hidden;
+  }
+  
+  .timeline:before{
+    position:absolute;
+    content:'';
+    width:4px;
+    height:calc(100%);
+  background: var(--grey);
+    left:18px;
+    border-radius:4px;
+  }
+  
+  .timeline-section{
+    display:block;
+    position:relative;
+    margin-bottom:30px;
+  }
+  
+  .timeline-section:after{
+    content:'';
+    position:absolute;
+    width:10px;
+    height:10px;
+    background: var(--grey);
+    top:3px;
+    left:0px;
+    border-radius:100%;
+  }
