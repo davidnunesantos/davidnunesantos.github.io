@@ -1,1 +1,1 @@
-![Karanalpe Status](https://github-readme-stats.vercel.app/api?davidnunesantos=karanalpe&show_icons=true)
+![David Status](https://github-readme-stats.vercel.app/api?username=davidnunesantos&show_icons=true)
