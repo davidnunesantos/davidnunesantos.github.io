@@ -21,7 +21,7 @@ jobs:
           echo "https://${access_token}:x-oauth-basic@github.com" > ~/.git-credentials
           git config --global user.email $email
           git config --global user.name $username
-      - name: deploy to master
+      - name: deploy to gh-pages
         run: |
           npm i
           NODE_ENV=production npm run build
