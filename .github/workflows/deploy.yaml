@@ -13,7 +13,7 @@ jobs:
           node-version: '12'
       - name: setup git auth
         env:
-          email: 'david_nunesantos@pgmais.com.br'
+          email: 'david_nunesantos@hotmail.com'
           username: 'davidnunesantos'
           access_token: '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'
         run: |
