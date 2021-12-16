@@ -10,5 +10,8 @@ module.exports = {
                 args[0].title = "David Nunes dos Santos";
                 return args;
             });
-    }
+    },
+    publicPath: process.env.NODE_ENV === 'production'
+        ? '/davidnunesantos.github.io/'
+        : '/'
 };
