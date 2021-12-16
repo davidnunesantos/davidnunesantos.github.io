@@ -53,7 +53,7 @@
             <v-col cols="12" class="white rounded-b-lg">
                 <v-row justify="center" no-gutters>
                     <v-col cols="auto">
-                        <v-btn color="dark-grey white--text" rounded href="https://davidnunesantos.github.io/public/files/DAVID%20NUNES%20DOS%20SANTOS.pdf" target="_blank">
+                        <v-btn color="dark-grey white--text" rounded href="https://github.com/davidnunesantos/davidnunesantos.github.io/raw/master/src/assets/files/DAVID_NUNES_DOS_SANTOS.pdf" target="_blank">
                             <v-icon left>mdi-file-download</v-icon>
                             Baixar currículo
                         </v-btn>
