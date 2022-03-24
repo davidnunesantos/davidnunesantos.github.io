@@ -18,8 +18,8 @@
                     </v-col>
                 </v-row>
                 <v-row justify="center" no-gutters>
-                    <v-col cols="auto">
-                        Full Stack Web Developer
+                    <v-col cols="auto text-center">
+                        System Analyst | Full Stack Web Developer
                     </v-col>
                 </v-row>
                 <v-row justify="center" no-gutters class="mt-5">

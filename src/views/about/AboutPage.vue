@@ -8,9 +8,9 @@
         <v-row>
             <v-col cols="12">
                 <p><b>Olá, eu sou David!</b></p>
-                <p>Sou alegre, positivo e organizado! Gosto de desafios e estou sempre em busca de novos conhecimentos. Trabalho bem em equipe e busco concluir os objetivos do grupo.</p>
-                <p>Em minhas horas vagas gosto de ver algum filme ou série, e jogar algum vídeo game com minha namorada. Também gosto de tocar teclado e conhecer lugares novos.</p>
-                <p>Sempre gostei muito de tecnologia e ingressei no curso de ciência da computação assim que sai do ensino médio. No último ano do curso consegui um estágio em uma pequena empresa na área de tecnologia atuando como suporte técnico, em menos de um ano consegui uma oportunidade para colocar em prática meus conhecimentos em programação e fui para o setor de desenvolvimento como estagário nesta mesma empresa. Consegui desenvolver minha carreira e cheguei até o cargo de Programador Pleno, após algum tempo surgiu uma nova oportunidade com novos desafios que me brilhou os olhos, e agora estou na PGMais vivendo novos desafios e compartilhando experiências.</p>
+                <p>Sou alegre, positivo e organizado! Gosto de desafios e estou sempre em busca de novos conhecimentos. Trabalho bem em equipe, busco concluir os objetivos do grupo e gosto de ajudar a desenvolver as pessoas profissionalmente.</p>
+                <p>Em minhas horas vagas gosto de ver algum filme ou série, e jogar algum vídeo game com minha esposa. Também gosto de tocar teclado e conhecer lugares novos.</p>
+                <p>Sempre gostei muito de tecnologia e ingressei no curso de ciência da computação assim que sai do ensino médio. Tenho mais de 4 anos de experiência com desenvolvimento de sistemas Web e Mobile, estou sempre em busca de aprimorar meus conhecimentos e habilidares, estrando atualizado com as tendências tecnológicas do mercado. Atualmente trabalho em uma empresa de tecnologia onde tenho a liberdade de discutir e decidir junto com o time qual é o melhor caminho a ser seguido para implementar soluções.</p>
             </v-col>
         </v-row>
         <v-divider></v-divider>
@@ -41,12 +41,12 @@ export default {
         return {
             skills: [
                 { name: "PHP", value: 95, icon: "mdi-language-php" },
+                { name: "VueJS", value: 95, icon: "mdi-vuejs" },
                 { name: "Javascript", value: 95, icon: "mdi-language-javascript" },
                 { name: "HTML 5", value: 95, icon: "mdi-language-html5" },
-                { name: "CSS 5", value: 90, icon: "mdi-language-css3" },
-                { name: "VueJS", value: 90, icon: "mdi-vuejs" },
-                { name: "JQuery", value: 85, icon: "mdi-jquery" },
-                { name: "RestAPI", value: 85, icon: "mdi-api" },
+                { name: "JQuery", value: 93, icon: "mdi-jquery" },
+                { name: "CSS 3", value: 90, icon: "mdi-language-css3" },
+                { name: "RestAPI", value: 90, icon: "mdi-api" },
                 { name: "PostgreSQL", value: 80, icon: "mdi-database" },
                 { name: "MySQL", value: 80, icon: "mdi-database-outline" },
                 { name: "Linux", value: 75, icon: "mdi-linux" },

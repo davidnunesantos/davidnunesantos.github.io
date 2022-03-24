@@ -63,7 +63,7 @@
                                     <v-col>
                                         <v-row v-for="(item, n) in course.items" :key="n" no-gutters>
                                             <v-col>
-                                                {{ item }}
+                                                {{ item.name }}
                                             </v-col>
                                         </v-row>
                                     </v-col>
@@ -83,50 +83,51 @@ export default {
         return {
             courses: [
                 {
-                    company: "B7Web",
-                    image: require("../../assets/education/logo_b7web.png"),
-                    items: [
-                        "Banco de dados MySQL",
-                        "Bootstrap Básico",
-                        "Frameworks",
-                        "Fundamentos do PHP",
-                        "Git/GitHub",
-                        "HTML 5 e CSS 3",
-                        "Javascript",
-                        "PHP Orientado a Objetos",
-                        "Produtividade na Programação",
-                        "Vue JS",
-                        "Webservices"
-                    ]
-                },
-                {
                     company: "Escola Conquer",
                     image: require("../../assets/education/logo_conquer.png"),
                     items: [
-                        "Inteligência Emocional",
-                        "Inteligência Financeira"
+                        { name: "Inteligência Emocional", link: "" },
+                        { name: "Inteligência Financeira", link: "" },
                     ]
                 },
                 {
                     company: "Solyd - Treinamentos e cursos online",
                     image: require("../../assets/education/logo_solyd.png"),
                     items: [
-                        "Python Básico"
-                    ]
-                },
-                {
-                    company: "Udemy",
-                    image: require("../../assets/education/logo_udemy.png"),
-                    items: [
-                        "Sass / SCSS",
-                        "Desenvolvimento Android"
+                        { name: "Python Básico", link: "" }
                     ]
                 },
                 {
                     company: "CertiProf",
                     image: require("../../assets/education/logo_certiprof.jpg"),
                     items: [
-                        "SFPC"
+                        { name: "SFPC", link: "" }
+                    ]
+                },
+                {
+                    company: "Udemy",
+                    image: require("../../assets/education/logo_udemy.png"),
+                    items: [
+                        { name: "Sass / SCSS", link: "" },
+                        { name: "Desenvolvimento Android", link: "" }
+                    ]
+                },
+                {
+                    company: "B7Web",
+                    image: require("../../assets/education/logo_b7web.png"),
+                    items: [
+                        { name: "Banco de dados MySQL", link: "https://alunos.b7web.com.br/media/certificates/certificado_4528.jpg" },
+                        { name: "Bootstrap Básico", link: "https://alunos.b7web.com.br/media/certificates/certificado_4652.jpg" },
+                        { name: "Docker", link: "https://alunos.b7web.com.br/media/certificates/certificado_5549796.jpg" },
+                        { name: "Frameworks", link: "https://alunos.b7web.com.br/media/certificates/certificado_8977704.jpg" },
+                        { name: "Fundamentos do PHP", link: "https://alunos.b7web.com.br/media/certificates/certificado_4654.jpg" },
+                        { name: "Git/GitHub", link: "https://alunos.b7web.com.br/media/certificates/certificado_4705066.jpg" },
+                        { name: "HTML 5 e CSS 3", link: "https://alunos.b7web.com.br/media/certificates/certificado_4552452.jpg" },
+                        { name: "Javascript", link: "https://alunos.b7web.com.br/media/certificates/certificado_4942.jpg" },
+                        { name: "PHP Orientado a Objetos", link: "https://alunos.b7web.com.br/media/certificates/certificado_849190.jpg" },
+                        { name: "Produtividade na Programação", link: "https://alunos.b7web.com.br/media/certificates/certificado_4882330.jpg" },
+                        { name: "Vue JS", link: "https://alunos.b7web.com.br/media/certificates/certificado_4211818.jpg" },
+                        { name: "Webservices", link: "https://alunos.b7web.com.br/media/certificates/certificado_4384445.jpg" },
                     ]
                 },
             ]

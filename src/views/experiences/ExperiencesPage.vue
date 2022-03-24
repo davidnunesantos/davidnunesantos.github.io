@@ -26,7 +26,7 @@
                         <v-card class="elevation-2">
                             <v-card-title>{{ item.position }}</v-card-title>
                             <v-card-subtitle>{{ item.period }}</v-card-subtitle>
-                            <v-card-text>{{ item.description }}</v-card-text>
+                            <v-card-text v-html="item.description"></v-card-text>
                         </v-card>
                     </v-timeline-item>
                 </v-timeline>
@@ -45,14 +45,14 @@ export default {
                     image: require("../../assets/experiences/logo_pgmais.jpg"),
                     timeline: [
                         {
-                            position: "Analista de Sistemas Sênior",
+                            position: "Analista de Sistemas Sênior | Tech Lead",
                             period: "Fevereiro de 2021 até o momento",
-                            description: "Desde que assumi o cargo de analista sênior, me tornei referência para os outros integrantes do time. Estou a frente de alguns projetos e ajudo no desenvolvimento da equipe."
+                            description: "Atualmente assumi um papel de líder técnico, sou o <i>backup</i> do meu líder direto. Realizo atividades de refinamento técnico, organização e distribuição das demandas para o time no sistema de gerenciamento, análise de problemas e melhoria de perfomarce, condução de dailys e sprints, além de ajudar na co-criação do planejamento de novas soluções e realizar o desenvolvimento."
                         },
                         {
                             position: "Analista de Sistemas Pleno",
                             period: "Janeiro de 2020 à Fevereiro de 2021",
-                            description: "Além de continuar trabalhando com PHP, estou adquirindo novos conhecimentos nesta nova jornada: ferramentas do Jira Software, o framework Laravel como base do projeto em que trabalho, o software Docker, Rundeck para rotinas de tarefas, Slack para comunicação, GitLab para versionamento de código, New Relic para acompanhamento de desempenho e algumas outras linguagens e frameworks como Python e Vue.js. Estou trabalhando em um time muito engajado e organizado."
+                            description: "Tendo o PHP como main language, realizava correção de bugs, desenvolvimento e implementação de funcionalidades para os paineis e portais da empresa. Adquiri bons conhecimentos em CI/CD, docker e outras ferramentas de desenvolvimento e DevOps que tornam a rotina de trabalho mais fácil e ágil."
                         }
                     ]
                 },
@@ -62,8 +62,8 @@ export default {
                     timeline: [
                         {
                             position: "Desenvolvedor Full Stack",
-                            period: "Agosto de 2019 até o momento",
-                            description: "Atualmente estou construindo um sistema de gestão financeira para integrar ao portal WEB que planejei e desenvolvi para realizar o controle operacional da transportadora Mai Transportes, juntamente com este portal desenvolvi uma API para ser consumida por um aplicativo mobile, também desenvolvido por mim.<br>Tecnologias utilizadas: PHP, ZendFramework, JQuery, Smarty Template, HTML 5, CSS 3, PostgreSQL, MySQL, RestAPI, Java Android."
+                            period: "Agosto de 2019 até o Setembro de 2021",
+                            description: "<p>Para melhorar minhas habilidades, iniciei esse trabalho como freelancer, onde pude desenvolver três projetos para a transportadora Mai Transportes, o primeiro foi portal web de controle operacional, para gerenciar a frota de veiculos e as entregas, foi feito em PHP utilizando o ZendFramwork. Juntamente com esse portal eu desenvolvi o segundo projeto que é um aplicativo para os motoristas utilizarem e atualizarem o status da viagem, foi desenvolvido em Java Android. O terceiro projeto foi um novo portal web para realizar o controle financeiro da empresa, ele foi desenvolvido utilizando VueJS para o front, e Laravel como API.</p><p>Tecnologias utilizadas:</p> <ul><li>PHP</li><li>ZendFramework</li><li>JQuery</li><li>Smarty Template</li><li>HTML 5</li><li>CSS 3</li><li>PostgreSQL</li><li>MySQL</li><li>RestAPI</li><li>Java Android</li><li>Laravel</li><li>VueJS</li></ul>"
                         }
                     ]
                 },
