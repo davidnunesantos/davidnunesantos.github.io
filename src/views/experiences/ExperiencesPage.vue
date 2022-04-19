@@ -45,9 +45,14 @@ export default {
                     image: require("../../assets/experiences/logo_pgmais.jpg"),
                     timeline: [
                         {
-                            position: "Analista de Sistemas Sênior | Tech Lead",
-                            period: "Fevereiro de 2021 até o momento",
-                            description: "Atualmente assumi um papel de líder técnico, sou o <i>backup</i> do meu líder direto. Realizo atividades de refinamento técnico, organização e distribuição das demandas para o time no sistema de gerenciamento, análise de problemas e melhoria de perfomarce, condução de dailys e sprints, além de ajudar na co-criação do planejamento de novas soluções e realizar o desenvolvimento."
+                            position: "Tech Leader",
+                            period: "Abril de 2022 até o momento",
+                            description: "Hoje realizo atividades de refinamento técnico das demandas, organização e distribução das demandas para o time, análise de problemas e melhorias de performance, condução de dailys e sprints, além de ajudar na co-criação do planejamento de novas soluções e realizar o desenvolvimento, também estou sempre em busca de inovações para dentro da empresa."
+                        },
+                        {
+                            position: "Analista de Sistemas Sênior",
+                            period: "Fevereiro de 2021 à Abril de 2022",
+                            description: "Desde que assumi o cargo de analista sênior, me tornei referência para os outros integrantes do time. Estou a frente de alguns projetos e ajudo no desenvolvimento da equipe."
                         },
                         {
                             position: "Analista de Sistemas Pleno",
@@ -62,7 +67,7 @@ export default {
                     timeline: [
                         {
                             position: "Desenvolvedor Full Stack",
-                            period: "Agosto de 2019 até o Setembro de 2021",
+                            period: "Agosto de 2019 à Setembro de 2021",
                             description: "<p>Para melhorar minhas habilidades, iniciei esse trabalho como freelancer, onde pude desenvolver três projetos para a transportadora Mai Transportes, o primeiro foi portal web de controle operacional, para gerenciar a frota de veiculos e as entregas, foi feito em PHP utilizando o ZendFramwork. Juntamente com esse portal eu desenvolvi o segundo projeto que é um aplicativo para os motoristas utilizarem e atualizarem o status da viagem, foi desenvolvido em Java Android. O terceiro projeto foi um novo portal web para realizar o controle financeiro da empresa, ele foi desenvolvido utilizando VueJS para o front, e Laravel como API.</p><p>Tecnologias utilizadas:</p> <ul><li>PHP</li><li>ZendFramework</li><li>JQuery</li><li>Smarty Template</li><li>HTML 5</li><li>CSS 3</li><li>PostgreSQL</li><li>MySQL</li><li>RestAPI</li><li>Java Android</li><li>Laravel</li><li>VueJS</li></ul>"
                         }
                     ]
