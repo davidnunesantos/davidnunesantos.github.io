@@ -109,7 +109,8 @@ export default {
                     image: require("../../assets/education/logo_udemy.png"),
                     items: [
                         { name: "Sass / SCSS", link: "" },
-                        { name: "Desenvolvimento Android", link: "" }
+                        { name: "Desenvolvimento Android", link: "" },
+                        { name: "DevOps Ninja: Docker, Kubernetes e Rancher", link: "https://www.udemy.com/certificate/UC-48975d8a-64d6-4c9d-b1fc-9679d51f5e61/" }
                     ]
                 },
                 {
