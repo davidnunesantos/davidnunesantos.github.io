@@ -9,7 +9,7 @@
                 </v-row>
                 <v-row align="center">
                     <v-col cols="auto">
-                        <v-avatar size="80">
+                        <v-avatar size="80" rounded>
                             <v-img src="../../assets/education/logo_uniandrade.png"></v-img>
                         </v-avatar>
                     </v-col>
@@ -25,6 +25,36 @@
                             </v-col>
                             <v-col>
                                 <span class="text-caption">De 2016 à 2019</span>
+                            </v-col>
+                        </v-row>
+                    </v-col>
+                </v-row>
+                <v-row align="center">
+                    <v-col cols="auto">
+                        <v-avatar size="80" rounded>
+                            <v-img src="../../assets/education/logo_uninter.jpg"></v-img>
+                        </v-avatar>
+                    </v-col>
+                    <v-col>
+                        <v-row>
+                            <v-col class="pb-0">
+                                <span class="text-h5 font-weight-bold">Centro Universitário Internacional UNINTER</span>
+                            </v-col>
+                        </v-row>
+                        <v-row class="mt-0">
+                            <v-col cols="auto">
+                                <span class="text-subtitle-1">Pós-graduação, Gestão da Tecnologia da Informação</span>
+                            </v-col>
+                            <v-col>
+                                <span class="text-caption">2023</span>
+                            </v-col>
+                        </v-row>
+                        <v-row class="mt-0">
+                            <v-col cols="auto" class="py-0">
+                                <span class="text-subtitle-1">Pós-graduação, Gestão para Líderes</span>
+                            </v-col>
+                            <v-col class="py-0">
+                                <span class="text-caption">2023</span>
                             </v-col>
                         </v-row>
                     </v-col>
@@ -49,8 +79,8 @@
                     >
                         <v-row>
                             <v-col cols="auto">
-                                <v-avatar size="80">
-                                    <v-img :src="course.image"></v-img>
+                                <v-avatar size="80" rounded>
+                                    <v-img :src="course.image" contain></v-img>
                                 </v-avatar>
                             </v-col>
                             <v-col>

@@ -7,19 +7,19 @@
                         <v-avatar size="200">
                             <v-img 
                                 position="top center"
-                                src="../assets/david.jpg"
+                                src="../assets/david2.jpg"
                             ></v-img>
                         </v-avatar>
                     </v-col>
                 </v-row>
                 <v-row justify="center">
-                    <v-col cols="auto">
-                        <h1>David N. Santos</h1>
+                    <v-col cols="auto" class="text-center">
+                        <h1>David N. dos Santos Andrade</h1>
                     </v-col>
                 </v-row>
                 <v-row justify="center" no-gutters>
                     <v-col cols="auto text-center">
-                        System Analyst | Full Stack Web Developer
+                        Squad Leader
                     </v-col>
                 </v-row>
                 <v-row justify="center" no-gutters class="mt-5">
