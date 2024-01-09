@@ -168,7 +168,7 @@ export default {
                 { name: "GitHub", value: 80, icon: "mdi-github" },
                 { name: "Linux", value: 75, icon: "mdi-linux" },
                 { name: "Docker", value: 60, icon: "mdi-docker" },
-                { name: "Google Cloud Plataform", value: 50, icon: "mdi-google-cloud" },
+                { name: "Google Cloud Platform", value: 50, icon: "mdi-google-cloud" },
                 { name: "Oracle Cloud", value: 40, icon: "mdi-cloud" },
                 { name: "Android Studio", value: 30, icon: "mdi-android-studio" },
             ],
