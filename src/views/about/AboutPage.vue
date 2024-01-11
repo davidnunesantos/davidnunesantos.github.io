@@ -8,10 +8,10 @@
         <v-row>
             <v-col cols="12">
                 <p><b>Olá, eu sou David!</b></p>
-                <p>Com uma jornada profissional de mais de 6 anos, minha carreira começou no suporte técnico, evoluindo para o desenvolvimento web e, posteriormente, para papéis mais desafiadores. Ao longo dessas experiências, desenvolvi habilidades sólidas em diversas tecnologias, desde PHP e Zend Framework até Docker e VueJS.</p>
-                <p>Atualmente, como Squad Leader, lidero um time com paixão e dedicação. Vou além de simplesmente gerenciar projetos e equipes, atuando como facilitador e mentor. Meu foco está em engajar e orientar meu time para o sucesso, aplicando metodologias ágeis como Scrum e analisando dados para garantir um desempenho excepcional.</p>
-                <p>Além do ambiente profissional, sou uma pessoa alegre e positiva. Nos momentos de lazer, divido meu tempo entre filmes, séries, videogames e a paixão por tocar teclado. Estou sempre em busca de desafios estimulantes, tanto no desenvolvimento pessoal quanto na busca por soluções inovadoras no campo tecnológico.</p>
-                <p>Minha trajetória reflete meu comprometimento com o crescimento profissional e a busca constante por excelência. Na minha atual posição como Squad Leader, tenho a liberdade de liderar estrategicamente, influenciando positivamente não apenas projetos, mas também o desenvolvimento individual e coletivo da equipe. Estou ansioso para abraçar novos desafios, fazendo uma contribuição significativa para impulsionar o sucesso do meu time e da empresa como um todo.</p>
+                <p>Durante minha jornada profissional de mais de 6 anos em Tecnologia, construi uma carreira sólida. Iniciando no suporte técnico, tive a oportunidade de migrar para a programação rapidamente, conquistando novos desafios devido à alta performance.</p>
+                <p>Atualmente, lidero um time com paixão e dedicação como Squad Leader. Atuo como facilitador e mentor e meu foco está em desenvolver o potencial de cada membro da equipe, garantindo uma análise de dados estratégica, através de metodologias ágeis, como Scrum.</p>
+                <p>Sou uma pessoa alegre e positiva, dentro e fora do contexto profissional. Nos momentos de lazer, divido meu tempo entre filmes, séries, videogames, boardgames e a paixão por tocar teclado. Além disso, uno o meu desenvolvimento profissional ao hobby, através da busca por soluções inovadoras no campo tecnológico, desenvolvendo sistemas para uso pessoal.</p>
+                <p>Minha trajetória reflete meu comprometimento e a busca constante por excelência. Estou ansioso para abraçar novos desafios, contribuindo com o desenvolvimento do pilar do crescimento de qualquer empresa: pessoas.</p>
             </v-col>
         </v-row>
         <v-divider></v-divider>

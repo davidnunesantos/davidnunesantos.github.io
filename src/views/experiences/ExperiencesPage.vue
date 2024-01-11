@@ -66,7 +66,7 @@ export default {
                         {
                             position: "Squad Leader",
                             period: "Novembro de 2023 até o momento",
-                            description: "Antes mesmo da formalização do cargo já atuava como líder de pessoas, atualmente realizo todo o processo de gestão de pessoas do time, desde o recrutamento até o desligamento. Além disso sou responsável pela condução dos rituais do time, trabalhamos com a métodologia <i>Scrum</i> e além de <i>Squad Leader</i> também faço o papel de <i>Scrum Master</i>. Estando em uma posição de gestor tenho a responsabilidade de engajar o time, fazendo a análise de dados para ter uma equipe de alta performance.",
+                            description: "Realizo todo o processo de gestão de pessoas do time, desde o recrutamento até o offboarding. Sou responsável pela condução dos rituais do time, trabalhando com a metodologia Scrum, atuando no papel de Scrum Master. Estando em uma posição de gestor tenho a responsabilidade de engajar  e potencializar o resultado de todo o time, fazendo a análise dos dados de maneira estratégica para ter uma equipe de alta performance.",
                             skills: [
                                 {
                                     icon: "mdi-sync",
@@ -158,7 +158,7 @@ export default {
                         {
                             position: "Tech Leader",
                             period: "Abril de 2022 à Novembro de 2023",
-                            description: "Como líder récnico, me tornei o principal responsável pelas aplicações <i>front-end</i> da empresa, realizava atividades de refinamento técnico das demandas para o time, análise de problemas e melhorias de performance. Além disso, participava do planejamento de novas soluções, estando sempre em busca de inovações para dentro da empresa.",
+                            description: "Como líder récnico, me tornei o principal responsável pelas aplicações front-end da empresa, realizava atividades de refinamento técnico das demandas para o time, análise de problemas e melhorias de performance. Além disso, participava do planejamento de novas soluções, estando sempre em busca de inovações para dentro da empresa. Atuava também na gestão de pessoas.",
                             skills: [
                                 {
                                     icon: "mdi-human-male-board",

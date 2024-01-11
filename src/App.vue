@@ -53,6 +53,11 @@ export default {
                     href: "/experiences",
                     icon: "mdi-briefcase"
                 },
+                projects: {
+                    name: "Projetos",
+                    href: "/projects",
+                    icon: "mdi-projector-screen"
+                },
                 education: {
                     name: "Formação e Cursos",
                     href: "/education",
