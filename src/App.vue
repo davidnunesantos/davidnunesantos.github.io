@@ -21,7 +21,7 @@
                     <v-col cols="12" md="4" lg="3" xl="2">
                         <the-profile></the-profile>
                     </v-col>
-                    <v-col>
+                    <v-col cols="12" md="8" lg="9" xl="10">
                         <v-sheet min-height="70vh" rounded="lg">
                             <router-view></router-view>
                         </v-sheet>
