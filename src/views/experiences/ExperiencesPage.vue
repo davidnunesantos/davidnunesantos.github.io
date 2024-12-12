@@ -22,6 +22,8 @@
                         v-for="(item, i) in experience.timeline"
                         :key="i"
                         small
+                        fill-dot
+                        color="#52796f"
                     >
                         <v-card class="elevation-2">
                             <v-card-title>{{ item.position }}</v-card-title>
@@ -30,19 +32,36 @@
                                 <v-row>
                                     <v-col cols="12">
                                         <p>
-                                            <span v-html="item.description" />
+                                            <span class="black--text" v-html="item.description" />
                                         </p>
                                     </v-col>
                                 </v-row>
                                 <v-row no-gutters class="mt-2">
-                                    <v-col cols="12">
-                                        <b>Principais competências</b>
+                                    <v-col cols="12" sm="6">
+                                        <v-row no-gutters>
+                                            <v-col cols="12">
+                                                <b>Principais Soft Skills</b>
+                                            </v-col>
+                                            <v-col v-for="(skill, k) in item.softskills" cols="auto" class="pa-1" :key="k">
+                                                <v-chip color="#52796f" small class="white--text">
+                                                    <v-icon left small>{{ skill.icon }}</v-icon>
+                                                    <span>{{ skill.title }}</span>
+                                                </v-chip>
+                                            </v-col>
+                                        </v-row>
                                     </v-col>
-                                    <v-col v-for="(skill, k) in item.skills" cols="auto" class="pa-1" :key="k">
-                                        <v-chip :color="skill.color" small>
-                                            <v-icon left small>{{ skill.icon }}</v-icon>
-                                            {{ skill.title }}
-                                        </v-chip>
+                                    <v-col cols="12" sm="6">
+                                        <v-row no-gutters>
+                                            <v-col cols="12">
+                                                <b>Principais Hard Skills</b>
+                                            </v-col>
+                                            <v-col v-for="(skill, k) in item.hardskills" cols="auto" class="pa-1" :key="k">
+                                                <v-chip color="#2B2D42" small class="white--text">
+                                                    <v-icon left small>{{ skill.icon }}</v-icon>
+                                                    <span>{{ skill.title }}</span>
+                                                </v-chip>
+                                            </v-col>
+                                        </v-row>
                                     </v-col>
                                 </v-row>
                             </v-card-text>
@@ -63,322 +82,265 @@ export default {
                     company: "PG Mais Soluções em Tecnologia da Informação",
                     image: require("../../assets/experiences/logo_pg_nova.svg"),
                     timeline: [
-                        {
-                            position: "Squad Leader",
-                            period: "Novembro de 2023 até o momento",
-                            description: "Realizo todo o processo de gestão de pessoas do time, desde o recrutamento até o offboarding. Sou responsável pela condução dos rituais do time, trabalhando com a metodologia Scrum, atuando no papel de Scrum Master. Estando em uma posição de gestor tenho a responsabilidade de engajar  e potencializar o resultado de todo o time, fazendo a análise dos dados de maneira estratégica para ter uma equipe de alta performance.",
-                            skills: [
+                    {
+                            position: "Squad Leader (Inteligência Artificial)",
+                            period: "Março de 2024 até o momento",
+                            description: "Atualmente lidero um time focado em inteligência artificial, coordenando projetos de chatbots e IA preditiva com tecnologias como Watson, Java, Spring e ReactJS. Sou responsável por conduzir cerimônias ágeis, monitorar KPIs, controlar a DRE da área e capacitar a equipe. Também faço a gestão do backlog e preparo relatórios semanais para a diretoria, mantendo o foco em inovação e eficiência operacional.",
+                            softskills: [
                                 {
-                                    icon: "mdi-sync",
-                                    color: "green",
-                                    title: "Métodologia Ágil"
+                                    icon: "mdi-account-group",
+                                    title: "Liderança de Equipe"
                                 },
                                 {
-                                    icon: "mdi-file-arrow-left-right",
-                                    color: "green",
-                                    title: "Gestão da Mudança"
+                                    icon: "mdi-comment-processing",
+                                    title: "Comunicação Eficaz"
                                 },
                                 {
-                                    icon: "mdi-chart-multiple",
-                                    color: "green",
-                                    title: "Analise de dados"
+                                    icon: "mdi-bug-check",
+                                    title: "Resolução de Problemas"
                                 },
                                 {
-                                    icon: "mdi-account-group-outline",
-                                    color: "green",
-                                    title: "Gestão de Pessoas"
+                                    icon: "mdi-chart-line",
+                                    title: "Gestão de DRE e KPIs"
                                 },
                                 {
-                                    icon: "mdi-human-male-board",
-                                    color: "green",
-                                    title: "Mentoria"
+                                    icon: "mdi-sprout",
+                                    title: "Mentoria e Desenvolvimento de Pessoas"
                                 },
                                 {
-                                    icon: "mdi-cloud",
-                                    color: "primary",
-                                    title: "Oracle Cloud"
+                                    icon: "mdi-account-group",
+                                    title: "Gestão de Performance da Equipe"
+                                }
+                            ],
+                            hardskills: [
+                                {
+                                    icon: "mdi-forum",
+                                    title: "Watson (IA Conversacional)"
+                                },
+                                {
+                                    icon: "mdi-language-java",
+                                    title: "Java (Spring)"
+                                },
+                                {
+                                    icon: "mdi-react",
+                                    title: "ReactJS"
                                 },
                                 {
                                     icon: "mdi-docker",
-                                    color: "primary",
                                     title: "Docker"
                                 },
                                 {
-                                    icon: "mdi-sass",
-                                    color: "primary",
-                                    title: "SASS"
+                                    icon: "mdi-kubernetes",
+                                    title: "Kubernetes"
                                 },
                                 {
-                                    icon: "mdi-drawing-box",
-                                    color: "primary",
-                                    title: "Design System"
+                                    icon: "mdi-view-column",
+                                    title: "Kanban"
                                 },
                                 {
-                                    icon: "mdi-api",
-                                    color: "primary",
-                                    title: "Rest e Soap API"
+                                    icon: "mdi-restore",
+                                    title: "Scrum"
                                 },
+                                {
+                                    icon: "mdi-refresh-auto",
+                                    title: "Arquitetura de Sistemas e Automação"
+                                }
+                            ]
+                        },
+                        {
+                            position: "Squad Leader (Front-end)",
+                            period: "Novembro de 2023 à Março de 2024",
+                            description: "Gerenciei um time de desenvolvimento front-end, implementando soluções com VueJS e outras tecnologias web. Conduzi cerimônias Scrum, garantindo entregas de alta qualidade e promovendo o desenvolvimento profissional da equipe. Fui responsável por definir padrões de design e boas práticas, gerenciar o backlog e acompanhar a performance do time, sempre em busca de otimização e inovação.",
+                            softskills: [
+                                {
+                                    icon: "mdi-account-group",
+                                    title: "Gestão de Performance da Equipe"
+                                },
+                                {
+                                    icon: "mdi-comment-quote",
+                                    title: "Feedback Constante"
+                                },
+                                {
+                                    icon: "mdi-comment-processing",
+                                    title: "Comunicação Eficaz"
+                                },
+                                {
+                                    icon: "mdi-bullseye-arrow",
+                                    title: "Orientação para Resultados"
+                                },
+                                {
+                                    icon: "mdi-map-marker-path",
+                                    title: "Planejamento Estratégico"
+                                }
+                            ],
+                            hardskills: [
                                 {
                                     icon: "mdi-language-php",
-                                    color: "primary",
                                     title: "PHP"
                                 },
                                 {
-                                    icon: "mdi-laravel",
-                                    color: "primary",
-                                    title: "Laravel"
-                                },
-                                {
                                     icon: "mdi-vuejs",
-                                    color: "primary",
                                     title: "VueJS"
                                 },
                                 {
-                                    icon: "mdi-vuetify",
-                                    color: "primary",
-                                    title: "Vuetify"
+                                    icon: "mdi-restore",
+                                    title: "Scrum"
                                 },
                                 {
-                                    icon: "mdi-database",
-                                    color: "primary",
-                                    title: "MySQL"
+                                    icon: "mdi-cogs",
+                                    title: "Design Patterns"
                                 },
                                 {
-                                    icon: "mdi-gitlab",
-                                    color: "primary",
-                                    title: "GitLab"
+                                    icon: "mdi-account-group",
+                                    title: "Gestão de Performance da Equipe"
                                 },
-                                {
-                                    icon: "mdi-jira",
-                                    color: "primary",
-                                    title: "Jira"
-                                }
                             ]
                         },
                         {
                             position: "Tech Leader",
                             period: "Abril de 2022 à Novembro de 2023",
-                            description: "Como líder récnico, me tornei o principal responsável pelas aplicações front-end da empresa, realizava atividades de refinamento técnico das demandas para o time, análise de problemas e melhorias de performance. Além disso, participava do planejamento de novas soluções, estando sempre em busca de inovações para dentro da empresa. Atuava também na gestão de pessoas.",
-                            skills: [
+                            description: "Como Tech Leader, assumi a responsabilidade técnica dos painéis de mensageria, garantindo uma arquitetura de sistemas eficiente e a automação de processos com Docker e CI/CD. Liderei o desenvolvimento de rotinas automatizadas, criação de pipelines e melhorias de performance, além de apoiar a capacitação da equipe e monitoramento de KPIs. Também fui a principal referência técnica do time e colaborei na coordenação e evolução do grupo.",
+                            softskills: [
                                 {
-                                    icon: "mdi-human-male-board",
-                                    color: "green",
-                                    title: "Mentoria"
+                                    icon: "mdi-account-group",
+                                    title: "Liderança de Equipe"
                                 },
                                 {
-                                    icon: "mdi-docker",
-                                    color: "primary",
-                                    title: "Docker"
+                                    icon: "mdi-lightbulb-on",
+                                    title: "Tomada de Decisão Estratégica"
                                 },
                                 {
-                                    icon: "mdi-sass",
-                                    color: "primary",
-                                    title: "SASS"
+                                    icon: "mdi-chess-rook",
+                                    title: "Pensamento Estratégico"
                                 },
                                 {
-                                    icon: "mdi-drawing-box",
-                                    color: "primary",
-                                    title: "Design System"
+                                    icon: "mdi-bug-check",
+                                    title: "Resolução de Problemas"
                                 },
                                 {
-                                    icon: "mdi-language-python",
-                                    color: "primary",
-                                    title: "Python"
-                                },
-                                {
-                                    icon: "mdi-api",
-                                    color: "primary",
-                                    title: "Rest e Soap API"
-                                },
+                                    icon: "mdi-handshake",
+                                    title: "Colaboração e Trabalho em Equipe"
+                                }
+                            ],
+                            hardskills: [
                                 {
                                     icon: "mdi-language-php",
-                                    color: "primary",
                                     title: "PHP"
                                 },
                                 {
-                                    icon: "mdi-laravel",
-                                    color: "primary",
-                                    title: "Laravel"
-                                },
-                                {
                                     icon: "mdi-vuejs",
-                                    color: "primary",
                                     title: "VueJS"
                                 },
                                 {
-                                    icon: "mdi-vuetify",
-                                    color: "primary",
-                                    title: "Vuetify"
+                                    icon: "mdi-cogs",
+                                    title: "CI/CD"
                                 },
                                 {
-                                    icon: "mdi-database",
-                                    color: "primary",
-                                    title: "MySQL"
+                                    icon: "mdi-cogs",
+                                    title: "Design Repositories"
                                 },
                                 {
-                                    icon: "mdi-gitlab",
-                                    color: "primary",
-                                    title: "GitLab"
+                                    icon: "mdi-cogs",
+                                    title: "Design Patterns"
                                 },
                                 {
-                                    icon: "mdi-jira",
-                                    color: "primary",
-                                    title: "Jira"
-                                }
+                                    icon: "mdi-drawing-box",
+                                    title: "Design System"
+                                },
+                                {
+                                    icon: "mdi-poll",
+                                    title: "Arquitetura de Alta Disponibilidade"
+                                },
                             ]
                         },
                         {
                             position: "Analista de Sistemas Sênior",
                             period: "Fevereiro de 2021 à Abril de 2022",
-                            description: "Além de continuar atuando no desenvolvimento e implementação de novas funcionalidades, migrei para uma equipe maior e me tornei referência para o time, contribuindo para o crescimento profissional de outros desenvolvedores.",
-                            skills: [
+                            description: "No time de mensageria, desenvolvi e aperfeiçoei painéis de gerenciamento de SMS, e-mail e RCS. Trabalhei com Laravel e VueJS, implementei melhorias de performance e realizei análises de bugs e correções. Participei de reuniões estratégicas e contribui ativamente para a definição do roadmap de produto, agregando valor às decisões do time.",
+                            softskills: [
                                 {
-                                    icon: "mdi-human-male-board",
-                                    color: "green",
-                                    title: "Mentoria"
+                                    icon: "mdi-handshake",
+                                    title: "Colaboração e Trabalho em Equipe"
                                 },
                                 {
-                                    icon: "mdi-docker",
-                                    color: "primary",
-                                    title: "Docker"
+                                    icon: "mdi-bug-check",
+                                    title: "Resolução de Problemas"
                                 },
                                 {
-                                    icon: "mdi-sass",
-                                    color: "primary",
-                                    title: "SASS"
+                                    icon: "mdi-wave",
+                                    title: "Adaptabilidade e Flexibilidade"
                                 },
                                 {
-                                    icon: "mdi-drawing",
-                                    color: "primary",
-                                    title: "Atomic Design"
-                                },
-                                {
-                                    icon: "mdi-language-python",
-                                    color: "primary",
-                                    title: "Python"
-                                },
-                                {
-                                    icon: "mdi-api",
-                                    color: "primary",
-                                    title: "Rest e Soap API"
-                                },
+                                    icon: "mdi-rocket-launch",
+                                    title: "Proatividade"
+                                }
+                            ],
+                            hardskills: [
                                 {
                                     icon: "mdi-language-php",
-                                    color: "primary",
                                     title: "PHP"
                                 },
                                 {
-                                    icon: "mdi-laravel",
-                                    color: "primary",
-                                    title: "Laravel"
-                                },
-                                {
-                                    icon: "mdi-language-html5",
-                                    color: "primary",
-                                    title: "HTML"
-                                },
-                                {
-                                    icon: "mdi-language-css3",
-                                    color: "primary",
-                                    title: "CSS"
-                                },
-                                {
-                                    icon: "mdi-language-javascript",
-                                    color: "primary",
-                                    title: "JavaScript"
-                                },
-                                {
                                     icon: "mdi-vuejs",
-                                    color: "primary",
                                     title: "VueJS"
                                 },
                                 {
-                                    icon: "mdi-vuetify",
-                                    color: "primary",
-                                    title: "Vuetify"
+                                    icon: "mdi-laravel",
+                                    title: "Laravel"
                                 },
                                 {
-                                    icon: "mdi-database",
-                                    color: "primary",
-                                    title: "MySQL"
+                                    icon: "mdi-atom",
+                                    title: "Atomic Design"
                                 },
                                 {
-                                    icon: "mdi-gitlab",
-                                    color: "primary",
-                                    title: "GitLab"
+                                    icon: "mdi-sass",
+                                    title: "SASS (SCSS)"
                                 },
                                 {
-                                    icon: "mdi-jira",
-                                    color: "primary",
-                                    title: "Jira"
-                                }
+                                    icon: "mdi-restore",
+                                    title: "Scrum"
+                                },
                             ]
                         },
                         {
                             position: "Analista de Sistemas Pleno",
                             period: "Janeiro de 2020 à Fevereiro de 2021",
-                            description: "Tendo o PHP como <i>main language</i>, realizava correção de <i>BUGs</i>, desenvolvimento e implementação de funcionalidades para os paineis e portais da empresa. Adquiri bons conhecimentos em <i>CI/CD</i>, docker e outras ferramentas de desenvolvimento e <i>DevOps</i> que tornam a rotina de trabalho mais fácil e ágil.",
-                            skills: [
+                            description: "No portal de negociação da empresa, usei Laravel para desenvolver e manter funcionalidades, trabalhando com um analista sênior. Focava em garantir qualidade de código e eficiência nas entregas. Também apoiei a integração de novas tecnologias e metodologias, otimizando o sistema e promovendo uma melhoria contínua.",
+                            softskills: [
                                 {
-                                    icon: "mdi-docker",
-                                    color: "primary",
-                                    title: "Docker"
+                                    icon: "mdi-handshake",
+                                    title: "Colaboração e Trabalho em Equipe"
                                 },
                                 {
-                                    icon: "mdi-api",
-                                    color: "primary",
-                                    title: "Soap API"
+                                    icon: "mdi-comment-processing",
+                                    title: "Comunicação Técnica"
                                 },
+                            ],
+                            hardskills: [
                                 {
                                     icon: "mdi-language-php",
-                                    color: "primary",
                                     title: "PHP"
                                 },
                                 {
                                     icon: "mdi-laravel",
-                                    color: "primary",
                                     title: "Laravel"
                                 },
                                 {
-                                    icon: "mdi-language-html5",
-                                    color: "primary",
-                                    title: "HTML"
+                                    icon: "mdi-api",
+                                    title: "RESTful API"
                                 },
                                 {
-                                    icon: "mdi-language-css3",
-                                    color: "primary",
-                                    title: "CSS"
+                                    icon: "mdi-api",
+                                    title: "SOAP API"
                                 },
                                 {
-                                    icon: "mdi-language-javascript",
-                                    color: "primary",
-                                    title: "JavaScript"
-                                },
-                                {
-                                    icon: "mdi-jquery",
-                                    color: "primary",
-                                    title: "JQuery"
-                                },
-                                {
-                                    icon: "mdi-database",
-                                    color: "primary",
+                                    icon: "mdi-database-outline",
                                     title: "MySQL"
                                 },
                                 {
-                                    icon: "mdi-bootstrap",
-                                    color: "primary",
-                                    title: "Bootstrap"
+                                    icon: "mdi-docker",
+                                    title: "Docker"
                                 },
-                                {
-                                    icon: "mdi-gitlab",
-                                    color: "primary",
-                                    title: "GitLab"
-                                },
-                                {
-                                    icon: "mdi-jira",
-                                    color: "primary",
-                                    title: "Jira"
-                                }
                             ]
                         }
                     ]
@@ -390,189 +352,157 @@ export default {
                         {
                             position: "Programador Pleno",
                             period: "Janeiro de 2019 à Janeiro de 2020",
-                            description: "Assumi um novo projeto que consistia na criação de um novo portal, o <i>ERP</i>. Realizei a integração entre todos os sistemas da empresa, criando uma <i>RestAPI</i> para comunicação entre os servidores e para emissão de Nota Fiscal, utilizei uma <i>SOAP API</i> para emissão de boletos. Além de continuar realizando treinamento e supervisão de novos estagiários de programação web.",
-                            skills: [
+                            description: "Liderei o desenvolvimento de APIs REST para integrar sistemas internos usando PHP e ZendFramework. Cuidei da manutenção e aprimoramento dos painéis web e planejei atividades junto ao gerente de TI. Desenvolvi soluções sob medida e treinei estagiários, apoiando o crescimento da equipe e assegurando continuidade nos projetos.",
+                            softskills: [
                                 {
-                                    icon: "mdi-api",
-                                    color: "primary",
-                                    title: "Rest e Soap API"
+                                    icon: "mdi-circle",
+                                    title: "Autonomia"
                                 },
                                 {
-                                    icon: "mdi-human-male-board",
-                                    color: "green",
-                                    title: "Treinamentos"
+                                    icon: "mdi-circle",
+                                    title: "Capacidade de Treinamento"
                                 },
+                                {
+                                    icon: "mdi-circle",
+                                    title: "Planejamento de Atividades"
+                                },
+                            ],
+                            hardskills: [
                                 {
                                     icon: "mdi-language-php",
-                                    color: "primary",
                                     title: "PHP"
                                 },
                                 {
                                     icon: "mdi-zend",
-                                    color: "primary",
-                                    title: "Zend Framework"
+                                    title: "ZendFramework"
                                 },
                                 {
-                                    icon: "mdi-language-html5",
-                                    color: "primary",
-                                    title: "HTML"
-                                },
-                                {
-                                    icon: "mdi-language-css3",
-                                    color: "primary",
-                                    title: "CSS"
-                                },
-                                {
-                                    icon: "mdi-language-javascript",
-                                    color: "primary",
-                                    title: "JavaScript"
-                                },
-                                {
-                                    icon: "mdi-jquery",
-                                    color: "primary",
-                                    title: "JQuery"
+                                    icon: "mdi-api",
+                                    title: "RESTful API"
                                 },
                                 {
                                     icon: "mdi-database",
-                                    color: "primary",
                                     title: "PostgreSQL"
                                 },
                                 {
-                                    icon: "mdi-bootstrap",
-                                    color: "primary",
-                                    title: "Bootstrap"
+                                    icon: "mdi-application-outline",
+                                    title: "Smarty Template"
                                 },
                                 {
-                                    icon: "mdi-github",
-                                    color: "primary",
-                                    title: "GitHub"
-                                }
+                                    icon: "mdi-bootstrap",
+                                    title: "Bootstrap"
+                                },
                             ]
                         },
                         {
                             position: "Programador Júnior",
                             period: "Março de 2018 à Dezembro de 2018",
-                            description: "Criei um novo portal para um novo equipamento realizar a comunicação com o banco de dados e para realizar o acompanhamento em tempo real. Treinava e supervisionava novos estagiários de programação web.",
-                            skills: [
+                            description: "Minha responsabilidade era corrigir bugs e desenvolver novas funcionalidades nos sistemas web, utilizando PHP e PostgreSQL. Com o tempo, assumi mais responsabilidades no desenvolvimento e colaborei com o time de TI para criar integrações e melhorar a experiência dos clientes.",
+                            softskills: [
                                 {
-                                    icon: "mdi-human-male-board",
-                                    color: "green",
-                                    title: "Treinamentos"
+                                    icon: "mdi-circle",
+                                    title: "Colaboração em Equipe"
                                 },
                                 {
+                                    icon: "mdi-circle",
+                                    title: "Resiliência e Aprendizado Contínuo"
+                                },
+                            ],
+                            hardskills: [
+                                {
                                     icon: "mdi-language-php",
-                                    color: "primary",
                                     title: "PHP"
                                 },
                                 {
                                     icon: "mdi-zend",
-                                    color: "primary",
-                                    title: "Zend Framework"
-                                },
-                                {
-                                    icon: "mdi-language-html5",
-                                    color: "primary",
-                                    title: "HTML"
-                                },
-                                {
-                                    icon: "mdi-language-css3",
-                                    color: "primary",
-                                    title: "CSS"
-                                },
-                                {
-                                    icon: "mdi-language-javascript",
-                                    color: "primary",
-                                    title: "JavaScript"
-                                },
-                                {
-                                    icon: "mdi-jquery",
-                                    color: "primary",
-                                    title: "JQuery"
+                                    title: "ZendFramework"
                                 },
                                 {
                                     icon: "mdi-database",
-                                    color: "primary",
                                     title: "PostgreSQL"
                                 },
                                 {
-                                    icon: "mdi-bootstrap",
-                                    color: "primary",
-                                    title: "Bootstrap"
+                                    icon: "mdi-bug",
+                                    title: "Correção de Bugs"
                                 },
                                 {
-                                    icon: "mdi-github",
-                                    color: "primary",
-                                    title: "GitHub"
-                                }
+                                    icon: "mdi-web",
+                                    title: "Desenvolvimento Web"
+                                },
+                                {
+                                    icon: "mdi-web-plus",
+                                    title: "Integrações de Sistemas"
+                                },
+                                {
+                                    icon: "mdi-application-outline",
+                                    title: "Smarty Template"
+                                },
+                                {
+                                    icon: "mdi-bootstrap",
+                                    title: "Bootstrap"
+                                },
                             ]
                         },
                         {
                             position: "Estagiário de Desenvolvimento Web",
                             period: "Outubro de 2017 à Março de 2018",
-                            description: "Realizava pequenas manutenções, correções de <i>BUGs</i> e implementação de algumas novas funcionalidades em três portais da empresa utilizando PHP, ZendFramework, JQuery e PostgreSQL.",
-                            skills: [
+                            description: "Após demonstrar bom desempenho no suporte, fui promovido para a equipe de desenvolvimento. Trabalhei na manutenção e melhoria de sistemas internos, aprendendo PHP, ZendFramework e PostgreSQL. Essa experiência me deu uma sólida base em desenvolvimento web e integração de sistemas, além de me preparar para funções de maior responsabilidade.",
+                            softskills: [
+                                {
+                                    icon: "mdi-circle",
+                                    title: "Aprendizado Rápido"
+                                },
+                                {
+                                    icon: "mdi-circle",
+                                    title: "Atenção aos Detalhes"
+                                },
+                            ],
+                            hardskills: [
                                 {
                                     icon: "mdi-language-php",
-                                    color: "primary",
                                     title: "PHP"
                                 },
                                 {
                                     icon: "mdi-zend",
-                                    color: "primary",
-                                    title: "Zend Framework"
+                                    title: "ZendFramework"
                                 },
                                 {
-                                    icon: "mdi-language-html5",
-                                    color: "primary",
-                                    title: "HTML"
+                                    icon: "mdi-web",
+                                    title: "Manutenção de Sistemas Internos"
                                 },
-                                {
-                                    icon: "mdi-language-css3",
-                                    color: "primary",
-                                    title: "CSS"
-                                },
-                                {
-                                    icon: "mdi-language-javascript",
-                                    color: "primary",
-                                    title: "JavaScript"
-                                },
-                                {
-                                    icon: "mdi-jquery",
-                                    color: "primary",
-                                    title: "JQuery"
-                                },
-                                {
-                                    icon: "mdi-database",
-                                    color: "primary",
-                                    title: "PostgreSQL"
-                                },
-                                {
-                                    icon: "mdi-bootstrap",
-                                    color: "primary",
-                                    title: "Bootstrap"
-                                },
-                                {
-                                    icon: "mdi-github",
-                                    color: "primary",
-                                    title: "GitHub"
-                                }
                             ]
                         },
                         {
                             position: "Estagiário de Suporte Técnico",
                             period: "Março de 2017 à Outubro de 2017",
-                            description: "Atendimento ao cliente, auxiliando na instalação, configuração e manutenção dos equipamentos vendidos pela empresa.",
-                            skills: [
+                            description: "Iniciei minha carreira no suporte técnico, auxiliando clientes na instalação e configuração de máquinas de venda automática para aceitar pagamentos eletrônicos. Nesse papel, adquiri experiência em atendimento ao cliente e solução de problemas técnicos. Essa etapa foi fundamental para meu desenvolvimento profissional, proporcionando uma base sólida para minha transição para o desenvolvimento de software.",
+                            softskills: [
                                 {
-                                    icon: "mdi-face-agent",
-                                    color: "primary",
-                                    title: "Suporte técnico"
+                                    icon: "mdi-circle",
+                                    title: "Comunicação com Clientes"
                                 },
                                 {
-                                    icon: "mdi-lan",
-                                    color: "primary",
-                                    title: "Redes"
-                                }
+                                    icon: "mdi-circle",
+                                    title: "Resolução de Problemas Técnicos"
+                                },
+                                {
+                                    icon: "mdi-circle",
+                                    title: "Atendimento ao Cliente"
+                                },
+                            ],
+                            hardskills: [
+                                {
+                                    icon: "mdi-circle",
+                                    title: "Instalação e Configuração de Equipamentos"
+                                },
+                                {
+                                    icon: "mdi-circle",
+                                    title: "Suporte Técnico"
+                                },
+                                {
+                                    icon: "mdi-circle",
+                                    title: "Conhecimento em Vending Machines"
+                                },
                             ]
                         }
                     ]

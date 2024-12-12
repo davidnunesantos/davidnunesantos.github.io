@@ -9,52 +9,52 @@
                 </v-row>
                 <v-row align="center">
                     <v-col cols="auto">
-                        <v-avatar size="80" rounded>
+                        <v-avatar size="50" rounded>
                             <v-img src="../../assets/education/logo_uniandrade.png"></v-img>
                         </v-avatar>
                     </v-col>
                     <v-col>
                         <v-row>
                             <v-col class="pb-0">
-                                <span class="text-h5 font-weight-bold">Centro Universitário Campos de Andrade UNIANDRADE</span>
+                                <span class="text-caption">Centro Universitário Campos de Andrade UNIANDRADE</span>
                             </v-col>
                         </v-row>
-                        <v-row class="mt-0">
+                        <v-row class="mt-0" align="center">
                             <v-col cols="auto">
-                                <span class="text-subtitle-1">Bacharelado, Ciência da Computação</span>
+                                <span class="text-h6">Bacharelado, <b>Ciência da Computação</b></span>
                             </v-col>
                             <v-col>
-                                <span class="text-caption">De 2016 à 2019</span>
+                                <span class="text-subtitle-2">De 2016 à 2019</span>
                             </v-col>
                         </v-row>
                     </v-col>
                 </v-row>
                 <v-row align="center">
                     <v-col cols="auto">
-                        <v-avatar size="80" rounded>
+                        <v-avatar size="50" rounded>
                             <v-img src="../../assets/education/logo_uninter.jpg"></v-img>
                         </v-avatar>
                     </v-col>
                     <v-col>
                         <v-row>
                             <v-col class="pb-0">
-                                <span class="text-h5 font-weight-bold">Centro Universitário Internacional UNINTER</span>
+                                <span class="text-caption">Centro Universitário Internacional UNINTER</span>
                             </v-col>
                         </v-row>
-                        <v-row class="mt-0">
+                        <v-row class="mt-0" align="center">
                             <v-col cols="auto">
-                                <span class="text-subtitle-1">Pós-graduação, Gestão da Tecnologia da Informação</span>
+                                <span class="text-h6">Pós-graduação, <b>Gestão da Tecnologia da Informação</b></span>
                             </v-col>
                             <v-col>
-                                <span class="text-caption">2023</span>
+                                <span class="text-subtitle-2">2023</span>
                             </v-col>
                         </v-row>
-                        <v-row class="mt-0">
+                        <v-row class="mt-0" align="center">
                             <v-col cols="auto" class="py-0">
-                                <span class="text-subtitle-1">Pós-graduação, Gestão para Líderes</span>
+                                <span class="text-h6">Pós-graduação, <b>Gestão para Líderes</b></span>
                             </v-col>
                             <v-col class="py-0">
-                                <span class="text-caption">2023</span>
+                                <span class="text-subtitle-2">2023</span>
                             </v-col>
                         </v-row>
                     </v-col>
@@ -79,21 +79,22 @@
                     >
                         <v-row>
                             <v-col cols="auto">
-                                <v-avatar size="80" rounded>
+                                <v-avatar size="50" rounded>
                                     <v-img :src="course.image" contain></v-img>
                                 </v-avatar>
                             </v-col>
                             <v-col>
                                 <v-row>
                                     <v-col class="pb-0">
-                                        <span class="text-h5 font-weight-bold">{{ course.company }}</span>
+                                        <span class="text-subtitle-1 font-weight-bold">{{ course.company }}</span>
                                     </v-col>
                                 </v-row>
-                                <v-row class="mt-0 ml-5">
+                                <v-row class="mt-0">
                                     <v-col>
                                         <v-row v-for="(item, n) in course.items" :key="n" no-gutters>
                                             <v-col>
-                                                {{ item.name }}
+                                                <v-icon left color="black">mdi-circle-small</v-icon>
+                                                <span class="text-subtitle-2">{{ item.name }}</span>
                                             </v-col>
                                         </v-row>
                                     </v-col>
@@ -128,19 +129,19 @@ export default {
                     ]
                 },
                 {
-                    company: "CertiProf",
-                    image: require("../../assets/education/logo_certiprof.jpg"),
-                    items: [
-                        { name: "SFPC", link: "" }
-                    ]
-                },
-                {
                     company: "Udemy",
                     image: require("../../assets/education/logo_udemy.png"),
                     items: [
                         { name: "Sass / SCSS", link: "" },
                         { name: "Desenvolvimento Android", link: "" },
                         { name: "DevOps Ninja: Docker, Kubernetes e Rancher", link: "https://www.udemy.com/certificate/UC-48975d8a-64d6-4c9d-b1fc-9679d51f5e61/" }
+                    ]
+                },
+                {
+                    company: "CertiProf",
+                    image: require("../../assets/education/logo_certiprof.jpg"),
+                    items: [
+                        { name: "SFPC", link: "" }
                     ]
                 },
                 {

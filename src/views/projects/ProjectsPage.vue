@@ -30,7 +30,7 @@
                                 </v-row>
                                 <v-row>
                                     <v-col cols="12">
-                                        <span class="text-h6">Linguagens e ferramentas utilizadas</span>
+                                        <span class="text-h6">Principais ferramentas utilizadas</span>
                                     </v-col>
                                     <v-col v-for="(tool, x) in project.tools" :key="x" cols="auto">
                                         <v-chip :color="tool.color" dark>
@@ -100,11 +100,36 @@ export default {
                 {
                     show: false,
                     logo: require('../../assets/projects/logo-melissa.png'),
+                    title: "Psicologia Clínica Melissa Andrade",
+                    subtitle: "Landing Page para divulgação de serviços de psicologia clínica",
+                    description: "<p>Desenvolvi uma Landing Page para divulgar o trabalho de psicologia clínica da psicóloga Melissa Andrade.</p>"
+                        + "<p>O site, acessível em <a href='https://melissaandrade.com.br' target='_blank'>melissaandrade.com.br</a>, foi construído utilizando NextJS e Tailwind CSS, proporcionando uma interface moderna e responsiva</p>"
+                        + "<p>A página destaca os benefícios da terapia e conta com uma integração com o Instagram, exibindo automaticamente os últimos posts da profissional.</p>"
+                        + "<p>Este projeto foi criado com foco em simplicidade e eficiência, oferecendo uma experiência visual atraente e uma navegação intuitiva para os visitantes</p>",
+                    images: [],
+                    tools: [
+                        {
+                            icon: "mdi-language-javascript",
+                            title: "NextJS",
+                            color: "#4f5b93"
+                        },
+                        {
+                            icon: "mdi-tailwind",
+                            title: "Tailwind CSS",
+                            color: "#cf649a"
+                        }
+                    ]
+                },
+                {
+                    show: false,
+                    logo: require('../../assets/projects/melissa/admin-mel.png'),
                     title: "Melissa Andrade - Gestão de Clientes",
                     subtitle: "Gerenciamento de clientes de uma clínica de psicologia",
-                    description: "<p>A ideia desse projeto surgiu no início do ano passado, quando minha esposa decidiu migrar da psicologia organizacional para a psicologia clínica. Ela precisava de alguma ferramenta que a ajudasse a organizar sua agenda de clientes, então aproveitei a oportunidade para treinar meus conhecimentos e criar uma aplicação 100% personalizada.</p>"
-                        + "<p>Utilizei como base o projeto Melvid - Controle Financeiro, pois a estrutura do código já estava pronta, a partir daí definimos a identidade visual, palheta de cores, quais funcionalidades seriam necessárias para o início e como poderiamos evoluir.</p>"
-                        + "<p>A estrutura é a mesma do projeto anterior, Laravel 9 como RestAPI utilizando dois containeres docker, e VueJS com Vuetify no front, o PostgreSQL ainda é o utilizando para armazenamento dos dados. Aproveitei o servidor da Google Cloud que eu já tinha para hospedar esse sistema também, somente precisando fazer o redirecionamento de portas para os subdomínios correspondentes.</p>",
+                    description: "<p>No início de 2023, identifiquei uma necessidade específica quando minha esposa decidiu migrar da psicologia organizacional para a psicologia clínica. Ela necessitava de uma ferramenta eficiente para organizar sua agenda de clientes, o que me motivou a desenvolver uma aplicação personalizada que atendesse a essas demandas.</p>"
+                        + "<p>Aproveitei o projeto <b>Melvid - Controle Financeiro</b> como base, reutilizando a estrutura de código existente para acelerar o desenvolvimento. A partir daí, definimos juntos a identidade visual, a paleta de cores e as funcionalidades essenciais para o lançamento inicial, além de mapear possíveis evoluções futuras.</p>"
+                        + "<p>Para desenvolver o sistema, utilizei Laravel 9 como a base do backend, criando uma REST API robusta que conecta eficientemente o frontend com o banco de dados. A interface foi construída em VueJS com Vuetify, proporcionando uma experiência de usuário moderna e responsiva. No armazenamento de dados, escolhi PostgreSQL, garantindo segurança e eficiência na gestão das informações. A aplicação foi implementada em dois containers Docker, isolando o ambiente de desenvolvimento e produção para fácil manutenção e escalabilidade. Finalmente, a hospedagem foi realizada na Google Cloud Platform, aproveitando um servidor pré-existente, com configuração de redirecionamento de portas para subdomínios específicos.</p>"
+                        + "<p>Esse projeto entregou uma solução 100% personalizada para minha esposa, auxiliando na organização de sua agenda de psicologia clínica e melhorando significativamente sua eficiência no gerenciamento de atendimentos. Com uma estrutura escalável, a aplicação pode crescer junto com a demanda. A modularidade do código facilita manutenções futuras e permite a adição de novas funcionalidades. Além disso, automatiza tarefas repetitivas e libera tempo para que ela se dedique aos atendimentos, aumentando a produtividade.</p>"
+                        + "<p>Planejo implementar integração com plataformas externas de calendário, como Google Calendar, para sincronizar automaticamente os compromissos e facilitar o gerenciamento da agenda. Além disso, considero adicionar dashboards para fornecer análises detalhadas sobre o crescimento da base de clientes e desempenho no atendimento. Em termos de segurança, pretendo introduzir camadas adicionais para proteger os dados sensíveis dos clientes, tornando a aplicação ainda mais robusta e confiável.</p>",
                     images: [
                         {
                             file: require('../../assets/projects/melissa/melissa-calendario1.png'),
@@ -214,10 +239,10 @@ export default {
                     logo: require('../../assets/projects/logo-melvid.png'),
                     title: "Melvid - Controle Financeiro",
                     subtitle: "Sistema de controle financeiro pessoal (Laravel + VueJS + PostgreSQL + GCloud)",
-                    description: "<p>Assim como muitas pessoas fazem, eu realizada o controle financeiro pessoal utilizando planilhas, mas manutenção e manipulação dos dados exigia muito tempo e esforço.</p>"
-                        + "<p>Tentei utilizar os aplicativos já existentes como por exemplo o Mobills, mas a forma como a aplicação controla as informações não se adequava à minha rotina financeira, foi então que em 2021 decidi criar uma aplicação personalizada para o meu dia a dia.</p>"
-                        + "<p>A aplicação foi construída utilizando no Back-end o Laravel 9 com os conceitos de RestAPI, utilizando dois containeres docker, um para a aplicação e outro como servidor nginx. Já o Front-end foi desenvolvido utilizando VueJS 2 e a biblioteca Vuetify para utilização dos componentes. Por fim, o armazenamento dos dados fica a cargo do PostgreSQL.</p>"
-                        + "<p>Todo o conjunto da aplicação foi inserido em um servidor GoogleCloud, onde eu posso controlar os recursos que seão utilizados.</p>",
+                    description: "<p>Em 2021, percebi que a gestão financeira pessoal por planilhas demandava muito tempo e esforço na manipulação dos dados. Após testar algumas alternativas, como o Mobills, e constatar que não atendiam minha rotina financeira, decidi criar uma aplicação personalizada, adequada ao meu dia a dia e às minhas necessidades específicas.</p>"
+                        + "<p>A aplicação foi desenvolvida com Laravel 9 no backend, estruturada como uma REST API e implantada em dois containers Docker: um para a aplicação em si e outro para o servidor Nginx. No frontend, utilizei VueJS 2 e a biblioteca Vuetify para criar uma interface intuitiva e funcional. O armazenamento dos dados é feito com PostgreSQL, escolhido por sua robustez e eficiência. Todo o sistema foi implantado em um servidor Google Cloud, garantindo controle total sobre os recursos e a capacidade de escalar conforme necessário.</p>"
+                        + "<p>A aplicação trouxe maior controle e flexibilidade para meu planejamento financeiro, eliminando a necessidade de planilhas e otimizando o tempo dedicado ao controle de receitas e despesas. A customização da plataforma permitiu que a gestão financeira se tornasse um processo ágil e prático, totalmente integrado às minhas necessidades e rotina. Além disso, a utilização de uma REST API e containers Docker facilita a manutenção e a escalabilidade, permitindo adaptações futuras conforme a necessidade.</p>"
+                        + "<p>Planejo expandir a aplicação com funcionalidades como relatórios financeiros automáticos e dashboards de análise para uma visão completa e visual das finanças ao longo do tempo. Também estou avaliando a possibilidade de incorporar integração com bancos para importação direta de transações, simplificando ainda mais a gestão financeira e automatizando processos rotineiros.</p>",
                     images: [
                         {
                             file: require('../../assets/projects/melvid/melvid-dashboard1.png'),
@@ -311,11 +336,9 @@ export default {
                     logo: require("../../assets/experiences/logo_transmai.png"),
                     title: "Transmai Transportes",
                     subtitle: "Projeto envolvendo três aplicações sendo duas web e uma mobile",
-                    description: "<p>Esse projeto foi solicitado por uma empresa de transportes que já tinha uma rotina de funcionamento fazendo o controle de cargas e da frota era gerenciado através de planilhas. A empresa chegou a analisar sistemas já existentes mas nenhum deles se adaptou à sua rotina.</p>"
-                        + "<p>A primeira aplicação solicitada foi para o gerenciamento de cargas e da frota, para isso foi preciso participar do dia a dia da empresa para entender o funcionamento da operação. Após realizar a análise, comecei a construir o sistema, fazendo entregas contínuas e realizando alterações solicitadas. O processo todo de desenvolvimento durou cerca de 3 meses. Essa aplicação foi construída utilizando PostgreSQL para armazenamento dos dados, e PHP com ZendFramework para interface do usuário.</p>"
-                        + "<p>A segunda aplicação trata-se de uma aplicação mobile para que os motoristas possam informar o status da viagem e acompanhar a liberação de cargas. Para construir essa aplicação precisei direcionar meus estudos para tecnologias mobile, na época eu tinha mais conhecimento sobre Java então decidi utilizar o Java nativo para Android. Foi necessário também a construção de uma API para que o app pudesse se comunicar, essa API foi construida com PHP e Laravel, acessando o banco de dados já existente em PostgreSQL.</p>"
-                        + "<p>A terceira a plicação também foi web, um sistema para realizar o controle financeiro da empresa, onde os dados se integravam com as informações de cargas e frota que eram inseridas através do outro sistema. Essa aplicação foi construída em VueJS e utilizou como backend a API construída para o aplicativo mobile.</p>"
-                        + "<p>As imagens do sistema não puderam ser disponibilizadas por questões constratuais.</p>",
+                    description: "<p>Esse projeto foi desenvolvido para uma empresa de transportes que gerenciava cargas e frota manualmente, utilizando planilhas. Após analisar o funcionamento da operação, desenvolvi três aplicações para atender às necessidades específicas da empresa.</p>"
+                        + "<p>A primeira aplicação foi construída com PHP e ZendFramework para gerenciar cargas e frota, utilizando PostgreSQL para armazenamento. A segunda foi um app mobile para Android em Java, permitindo que os motoristas acompanhassem o status das viagens e comunicassem atualizações. Para isso, criei uma API em Laravel que integrava os dados do app com o banco de dados existente. A terceira aplicação, construída em VueJS, foi um sistema financeiro que utiliza a mesma API do aplicativo para sincronizar informações de frota e cargas, consolidando o controle financeiro.</p>"
+                        + "<p>As três aplicações integradas substituíram o sistema manual de controle da empresa, trazendo maior precisão e eficiência para a gestão de cargas, frota e finanças. O sistema permitiu aos motoristas atualizarem o status em tempo real e facilitou o controle financeiro, reduzindo o tempo de operação e melhorando a transparência das informações.</p>",
                     tools: [
                         {
                             icon: "mdi-language-php",

@@ -3,19 +3,21 @@
         <v-app-bar
             app
             flat
+            style="background-color: #2B2D42;"
+            elevation="1"
         >
             <v-tabs
                 v-model="tab_selected"
                 centered
                 class="ml-n9"
-                color="dark"
+                dark
             >
                 <v-tab v-for="(link, n) in links" :key="n" :to="link.href">
                     <v-icon left>{{ link.icon }}</v-icon> {{ link.name }}
                 </v-tab>
             </v-tabs>
         </v-app-bar>
-        <v-main class="grey lighten-3">
+        <v-main style="background-color: #F4F4F9;">
             <v-container>
                 <v-row>
                     <v-col cols="12" md="4" lg="3" xl="2">
@@ -71,6 +73,7 @@ export default {
 
 <style>
 .v-main {
-    background: url("./assets/background_image.png");
+    background-color: #F4F4F9;
+    /* background: url("./assets/new_background.png"); */
 }
 </style>
