@@ -14,12 +14,12 @@
                 </v-row>
                 <v-row justify="center">
                     <v-col cols="auto" class="text-center white--text">
-                        <h1>David N. dos Santos Andrade</h1>
+                        <h1>David N. S. Andrade</h1>
                     </v-col>
                 </v-row>
                 <v-row justify="center" no-gutters>
                     <v-col cols="auto text-center white--text">
-                        A.I. Squad Leader
+                        Development Coordinator
                     </v-col>
                 </v-row>
                 <v-row justify="center" no-gutters class="mt-5">
@@ -39,7 +39,7 @@
                         </v-btn>
                     </v-col>
                     <v-col cols="auto">
-                        <v-btn text x-small href="https://www.linkedin.com/in/david-nunes-dos-santos/" target="_blank">
+                        <v-btn text x-small href="http://www.linkedin.com/in/david-nunes-dos-santos-andrade" target="_blank">
                             <v-icon small color="white">mdi-linkedin</v-icon>
                         </v-btn>
                     </v-col>

@@ -1,9 +1,6 @@
 <template>
     <v-container class="pa-5">
-        <v-row
-            v-for="(experience, n) in experiences"
-            :key="n"
-        >
+        <v-row v-for="(experience, n) in experiences" :key="n">
             <v-col cols="12">
                 <v-row align="center" class="ml-2">
                     <v-col cols="auto">
@@ -18,13 +15,7 @@
             </v-col>
             <v-col cols="12">
                 <v-timeline align-top dense>
-                    <v-timeline-item
-                        v-for="(item, i) in experience.timeline"
-                        :key="i"
-                        small
-                        fill-dot
-                        color="#52796f"
-                    >
+                    <v-timeline-item v-for="(item, i) in experience.timeline" :key="i" small fill-dot color="#52796f">
                         <v-card class="elevation-2">
                             <v-card-title>{{ item.position }}</v-card-title>
                             <v-card-subtitle>{{ item.period }}</v-card-subtitle>
@@ -42,7 +33,8 @@
                                             <v-col cols="12">
                                                 <b>Principais Soft Skills</b>
                                             </v-col>
-                                            <v-col v-for="(skill, k) in item.softskills" cols="auto" class="pa-1" :key="k">
+                                            <v-col v-for="(skill, k) in item.softskills" cols="auto" class="pa-1"
+                                                :key="k">
                                                 <v-chip color="#52796f" small class="white--text">
                                                     <v-icon left small>{{ skill.icon }}</v-icon>
                                                     <span>{{ skill.title }}</span>
@@ -55,7 +47,8 @@
                                             <v-col cols="12">
                                                 <b>Principais Hard Skills</b>
                                             </v-col>
-                                            <v-col v-for="(skill, k) in item.hardskills" cols="auto" class="pa-1" :key="k">
+                                            <v-col v-for="(skill, k) in item.hardskills" cols="auto" class="pa-1"
+                                                :key="k">
                                                 <v-chip color="#2B2D42" small class="white--text">
                                                     <v-icon left small>{{ skill.icon }}</v-icon>
                                                     <span>{{ skill.title }}</span>
@@ -82,71 +75,138 @@ export default {
                     company: "PG Mais Soluções em Tecnologia da Informação",
                     image: require("../../assets/experiences/logo_pg_nova.svg"),
                     timeline: [
-                    {
-                            position: "Squad Leader (Inteligência Artificial)",
-                            period: "Março de 2024 até o momento",
-                            description: "Atualmente lidero um time focado em inteligência artificial, coordenando projetos de chatbots e IA preditiva com tecnologias como Watson, Java, Spring e ReactJS. Sou responsável por conduzir cerimônias ágeis, monitorar KPIs, controlar a DRE da área e capacitar a equipe. Também faço a gestão do backlog e preparo relatórios semanais para a diretoria, mantendo o foco em inovação e eficiência operacional.",
-                            softskills: [
+                        {
+                            "position": "Coordinator Development",
+                            "period": "Janeiro de 2025 até o momento",
+                            "description": "Atuo como coordenador de seis times de desenvolvimento na PGMais, abrangendo áreas como mensageria, inteligência artificial, automação e produtos digitais. Lidero iniciativas de inovação, organização técnica e gestão de pessoas, com foco em eficiência operacional, entrega de valor e desenvolvimento contínuo das equipes. Implantei modelos como Dual-Track Agile e conduzo ações estratégicas com acompanhamento de KPIs, DRE e capacidade técnica dos times.",
+                            "softskills": [
                                 {
-                                    icon: "mdi-account-group",
-                                    title: "Liderança de Equipe"
+                                    "icon": "mdi-account-group",
+                                    "title": "Liderança Estratégica de Equipes"
                                 },
                                 {
-                                    icon: "mdi-comment-processing",
-                                    title: "Comunicação Eficaz"
+                                    "icon": "mdi-brain",
+                                    "title": "Pensamento Estratégico"
                                 },
                                 {
-                                    icon: "mdi-bug-check",
-                                    title: "Resolução de Problemas"
+                                    "icon": "mdi-chart-box-outline",
+                                    "title": "Gestão de Resultados e Indicadores"
                                 },
                                 {
-                                    icon: "mdi-chart-line",
-                                    title: "Gestão de DRE e KPIs"
+                                    "icon": "mdi-sprout",
+                                    "title": "Mentoria e Desenvolvimento de Pessoas"
                                 },
                                 {
-                                    icon: "mdi-sprout",
-                                    title: "Mentoria e Desenvolvimento de Pessoas"
+                                    "icon": "mdi-gesture-tap-button",
+                                    "title": "Tomada de Decisão"
                                 },
                                 {
-                                    icon: "mdi-account-group",
-                                    title: "Gestão de Performance da Equipe"
+                                    "icon": "mdi-lightbulb-on-outline",
+                                    "title": "Fomento à Inovação"
                                 }
                             ],
-                            hardskills: [
+                            "hardskills": [
                                 {
-                                    icon: "mdi-forum",
-                                    title: "Watson (IA Conversacional)"
+                                    "icon": "mdi-robot-outline",
+                                    "title": "IA Generativa e Preditiva"
                                 },
                                 {
-                                    icon: "mdi-language-java",
-                                    title: "Java (Spring)"
+                                    "icon": "mdi-docker",
+                                    "title": "Docker e Kubernetes"
                                 },
                                 {
-                                    icon: "mdi-react",
-                                    title: "ReactJS"
+                                    "icon": "mdi-language-php",
+                                    "title": "PHP (Laravel, Zend)"
                                 },
                                 {
-                                    icon: "mdi-docker",
-                                    title: "Docker"
+                                    "icon": "mdi-vuejs",
+                                    "title": "VueJS e ReactJS"
                                 },
                                 {
-                                    icon: "mdi-kubernetes",
-                                    title: "Kubernetes"
+                                    "icon": "mdi-view-column",
+                                    "title": "Scrum e Kanban"
                                 },
                                 {
-                                    icon: "mdi-view-column",
-                                    title: "Kanban"
+                                    "icon": "mdi-finance",
+                                    "title": "Gestão de DRE e Capacity"
                                 },
                                 {
-                                    icon: "mdi-restore",
-                                    title: "Scrum"
+                                    "icon": "mdi-monitor-dashboard",
+                                    "title": "Acompanhamento de KPIs"
                                 },
                                 {
-                                    icon: "mdi-refresh-auto",
-                                    title: "Arquitetura de Sistemas e Automação"
+                                    "icon": "mdi-lan",
+                                    "title": "Arquitetura de Sistemas Distribuídos"
                                 }
                             ]
-                        },
+                        }
+                        ,
+                        {
+                            "position": "Squad Leader (Inteligência Artificial)",
+                            "period": "Março de 2024 à Janeiro de 2025",
+                            "description": "Liderei o time de Inteligência Artificial da PGMais, conduzindo projetos de IA conversacional (Watson), IA preditiva e automação inteligente. Fui responsável pela gestão técnica e operacional da squad, conduzindo cerimônias ágeis, acompanhando indicadores (KPIs e DRE), organizando backlog e capacitando o time. Atuei de forma próxima à liderança da empresa com entregas estratégicas e relatórios executivos.",
+                            "softskills": [
+                                {
+                                    "icon": "mdi-account-group",
+                                    "title": "Liderança de Equipe"
+                                },
+                                {
+                                    "icon": "mdi-sprout",
+                                    "title": "Mentoria e Desenvolvimento de Pessoas"
+                                },
+                                {
+                                    "icon": "mdi-chart-box-outline",
+                                    "title": "Gestão de KPIs e DRE"
+                                },
+                                {
+                                    "icon": "mdi-brain",
+                                    "title": "Pensamento Estratégico"
+                                },
+                                {
+                                    "icon": "mdi-comment-processing",
+                                    "title": "Comunicação Eficaz"
+                                },
+                                {
+                                    "icon": "mdi-bug-check",
+                                    "title": "Resolução de Problemas"
+                                }
+                            ],
+                            "hardskills": [
+                                {
+                                    "icon": "mdi-robot-outline",
+                                    "title": "IA Conversacional (Watson)"
+                                },
+                                {
+                                    "icon": "mdi-language-java",
+                                    "title": "Java (Spring)"
+                                },
+                                {
+                                    "icon": "mdi-react",
+                                    "title": "ReactJS"
+                                },
+                                {
+                                    "icon": "mdi-docker",
+                                    "title": "Docker"
+                                },
+                                {
+                                    "icon": "mdi-kubernetes",
+                                    "title": "Kubernetes"
+                                },
+                                {
+                                    "icon": "mdi-view-column",
+                                    "title": "Kanban"
+                                },
+                                {
+                                    "icon": "mdi-restore",
+                                    "title": "Scrum"
+                                },
+                                {
+                                    "icon": "mdi-atom",
+                                    "title": "Arquitetura de Sistemas Inteligentes"
+                                }
+                            ]
+                        }
+                        ,
                         {
                             position: "Squad Leader (Front-end)",
                             period: "Novembro de 2023 à Março de 2024",
