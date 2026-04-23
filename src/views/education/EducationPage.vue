@@ -10,21 +10,21 @@
                 <v-row align="center">
                     <v-col cols="auto">
                         <v-avatar size="50" rounded>
-                            <v-img src="../../assets/education/logo_uniandrade.png"></v-img>
+                            <v-img src="../../assets/education/logo_utp.png"></v-img>
                         </v-avatar>
                     </v-col>
                     <v-col>
                         <v-row>
                             <v-col class="pb-0">
-                                <span class="text-caption">Centro Universitário Campos de Andrade UNIANDRADE</span>
+                                <span class="text-caption">Universidade Tuiuti do Paraná - UTP</span>
                             </v-col>
                         </v-row>
                         <v-row class="mt-0" align="center">
                             <v-col cols="auto">
-                                <span class="text-h6">Bacharelado, <b>Ciência da Computação</b></span>
+                                <span class="text-h6">MBA, <b>Inteligência Artificial e BigData</b></span>
                             </v-col>
                             <v-col>
-                                <span class="text-subtitle-2">De 2016 à 2019</span>
+                                <span class="text-subtitle-2">2026</span>
                             </v-col>
                         </v-row>
                     </v-col>
@@ -55,6 +55,28 @@
                             </v-col>
                             <v-col class="py-0">
                                 <span class="text-subtitle-2">2023</span>
+                            </v-col>
+                        </v-row>
+                    </v-col>
+                </v-row>
+                <v-row align="center">
+                    <v-col cols="auto">
+                        <v-avatar size="50" rounded>
+                            <v-img src="../../assets/education/logo_uniandrade.png"></v-img>
+                        </v-avatar>
+                    </v-col>
+                    <v-col>
+                        <v-row>
+                            <v-col class="pb-0">
+                                <span class="text-caption">Centro Universitário Campos de Andrade UNIANDRADE</span>
+                            </v-col>
+                        </v-row>
+                        <v-row class="mt-0" align="center">
+                            <v-col cols="auto">
+                                <span class="text-h6">Bacharelado, <b>Ciência da Computação</b></span>
+                            </v-col>
+                            <v-col>
+                                <span class="text-subtitle-2">De 2016 à 2019</span>
                             </v-col>
                         </v-row>
                     </v-col>

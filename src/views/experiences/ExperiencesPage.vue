@@ -71,14 +71,70 @@ export default {
     data() {
         return {
             experiences: [
+            {
+                    company: "Agrotis Agroinformatica",
+                    image: require("../../assets/experiences/logo_agrotis.png"),
+                    timeline: [
+                        {
+                            "position": "Tech Leader",
+                            "period": "Fevereiro de 2026 até o momento",
+                            "description": "Atuo como Tech Leader das plataformas Web no projeto Produtor Rural, sendo a principal referência para decisões de arquitetura e evolução do ecossistema, que envolve Java, React e microsserviços com Kafka. Também acompanho de perto todo o fluxo de entrega, utilizando Jenkins e Kubernetes para garantir deploys seguros em produção, sempre respeitando os padrões de engenharia e processos do time. No dia a dia, conduzo cerimônias ágeis e participo ativamente da mentoria técnica do time, apoiando o desenvolvimento dos profissionais e a melhoria contínua da plataforma, sempre alinhando as decisões técnicas com os objetivos do produto.",
+                            "softskills": [
+                                {
+                                    "icon": "mdi-account-group",
+                                    "title": "Liderança Tecnica de Equipes"
+                                },
+                                {
+                                    "icon": "mdi-brain",
+                                    "title": "Pensamento Crítico"
+                                },
+                                {
+                                    "icon": "mdi-sprout",
+                                    "title": "Mentoria e Desenvolvimento de Pessoas"
+                                },
+                                {
+                                    "icon": "mdi-gesture-tap-button",
+                                    "title": "Tomada de Decisão"
+                                },
+                                {
+                                    "icon": "mdi-lightbulb-on-outline",
+                                    "title": "Fomento à Inovação"
+                                },
+                            ],
+                            "hardskills": [
+                                
+                            {
+                                    "icon": "mdi-language-java",
+                                    "title": "Java"
+                                },
+                                {
+                                    "icon": "mdi-react",
+                                    "title": "React"
+                                },
+                                {
+                                    "icon": "mdi-kubernetes",
+                                    "title": "Kubernetes"
+                                },
+                                {
+                                    "icon": "mdi-view-column",
+                                    "title": "Scrum e Kanban"
+                                },
+                                {
+                                    "icon": "mdi-lan",
+                                    "title": "Arquitetura de Sistemas Distribuídos e Microserviços"
+                                }
+                            ]
+                        }
+                    ]
+                },
                 {
                     company: "PG Mais Soluções em Tecnologia da Informação",
                     image: require("../../assets/experiences/logo_pg_nova.svg"),
                     timeline: [
                         {
                             "position": "Coordinator Development",
-                            "period": "Janeiro de 2025 até o momento",
-                            "description": "Atuo como coordenador de seis times de desenvolvimento na PGMais, abrangendo áreas como mensageria, inteligência artificial, automação e produtos digitais. Lidero iniciativas de inovação, organização técnica e gestão de pessoas, com foco em eficiência operacional, entrega de valor e desenvolvimento contínuo das equipes. Implantei modelos como Dual-Track Agile e conduzo ações estratégicas com acompanhamento de KPIs, DRE e capacidade técnica dos times.",
+                            "period": "Janeiro de 2025 até Fevereiro de 2026",
+                            "description": "Atuei como coordenador de seis times de desenvolvimento na PGMais, abrangendo áreas como mensageria, inteligência artificial, automação e produtos digitais. Lidero iniciativas de inovação, organização técnica e gestão de pessoas, com foco em eficiência operacional, entrega de valor e desenvolvimento contínuo das equipes. Implantei modelos como Dual-Track Agile e conduzo ações estratégicas com acompanhamento de KPIs, DRE e capacidade técnica dos times.",
                             "softskills": [
                                 {
                                     "icon": "mdi-account-group",
